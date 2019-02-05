@@ -1,0 +1,251 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../override.css" type="text/css"><meta name="keywords" content="SchedulingData,ardisia.scheduling.dataTypes.SchedulingData,FREQ_DAILY,FREQ_MONTHLY,FREQ_WEEKLY,FREQ_YEARLY,allDay,byDay,byMonth,byMonthDay,bySetPos,byWeekNo,byYearDay,calendar,calendarDefinition,color,count,created,description,description,dtEnd,dtStart,editable,enabled,exDate,freq,id,interval,lastModified,location,rDate,schedulingData,sequence,summary,title,uid,uidPrefix,until,wkst"><title>ardisia.scheduling.dataTypes.SchedulingData</title></head><body><script language="javascript" type="text/javascript" src="../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'SchedulingData - API Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">Ardisia Component Library Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../package-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../class-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../all-index-A.html" onclick="loadClassListFrame('../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../index.html?ardisia/scheduling/dataTypes/SchedulingData.html&amp;ardisia/scheduling/dataTypes/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../images/logo.jpg" class="logoImage" alt="AdobeLogo" title="AdobeLogo"></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">SchedulingData</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SchedulingData"); titleBar_setSubNav(true,true,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">ardisia.scheduling.dataTypes</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  SchedulingData</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">SchedulingData  <img src="../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><p></p><p></p><p></p>
+  Instances of this class are used to describe calendar events.  Generally 
+  follows the iCalendar spec. 
+  
+  <p>Note, a single SchedulingData object can define an infinite number of 
+  events if the object is a "recurring" object without a "count" or "until" 
+  property set. It is important to recognize that multiple items may reference 
+  the same SchedulingData object.</p>
+  
+               <p>See the iCalendar spec for more details on recurrence.
+  http://tools.ietf.org/html/rfc5545</p>
+            <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#allDay" class="signatureLink">allDay</a> : Boolean<div class="summaryTableDescription">
+	  Whether or not the object is an "all day" event.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#byDay" class="signatureLink">byDay</a> : Array<div class="summaryTableDescription">
+	  Defines what day(s) of the week the recurrence rule applies to.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#byMonth" class="signatureLink">byMonth</a> : Array<div class="summaryTableDescription">
+	  The byMonth rule part specifies an array of months of the year.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#byMonthDay" class="signatureLink">byMonthDay</a> : Array<div class="summaryTableDescription">
+	  The byMonthDay rule part specifies an array of days of the month.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#bySetPos" class="signatureLink">bySetPos</a> : Array<div class="summaryTableDescription">
+	  The bySetPos rule part specifies a multidimensional array of values
+	  that corresponds to the nth occurrence within the set of recurrence 
+	  instances specified by the rule.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#byWeekNo" class="signatureLink">byWeekNo</a> : Array<div class="summaryTableDescription">
+	  The byWeekNo rule part specifies an array of ordinals specifying weeks 
+	  of the year.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#byYearDay" class="signatureLink">byYearDay</a> : Array<div class="summaryTableDescription">
+	  The byYearDay rule part specifies an array of days of the year.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#calendar" class="signatureLink">calendar</a> : <a href="../../../ardisia/scheduling/dataTypes/CalendarDefinitionData.html">CalendarDefinitionData</a><div class="summaryTableDescription">
+	  A reference to the optional CalendarDefinitionData object associated 
+	 	with this object.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#count" class="signatureLink">count</a> : int<div class="summaryTableDescription">
+	  The count rule part defines the number of occurrences at which to 
+	  range-bound the recurrence.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#created" class="signatureLink">created</a> : Date<div class="summaryTableDescription"> 
+	  This property specifies the Date when this object was created.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#description" class="signatureLink">description</a> : String<div class="summaryTableDescription"> 
+	  This property provides a more complete description of the object than
+	  "summary".</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#dtEnd" class="signatureLink">dtEnd</a> : Date<div class="summaryTableDescription">
+	  This property specifies a Date object for when the event ends.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#dtStart" class="signatureLink">dtStart</a> : Date<div class="summaryTableDescription"> 
+	  This property specifies a Date object for when the event begins.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#exDate" class="signatureLink">exDate</a> : Array<div class="summaryTableDescription">
+	  This property defines the list of Date object exceptions for recurring 
+	  events.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#freq" class="signatureLink">freq</a> : String<div class="summaryTableDescription">
+	  The freq rule part identifies the type of recurrence rule.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#interval" class="signatureLink">interval</a> : int = 1<div class="summaryTableDescription">
+	  The interval rule part contains a positive integer representing how 
+	  often the recurrence rule repeats.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#lastModified" class="signatureLink">lastModified</a> : Date<div class="summaryTableDescription">
+	  The property specifies a Date for when the information associated with 
+	  the calendar component was last revised.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#location" class="signatureLink">location</a> : String<div class="summaryTableDescription">
+	  The property defines the intended venue for the event.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#rDate" class="signatureLink">rDate</a> : Array<div class="summaryTableDescription">
+	  This property defines an array of Date objects for recurring events.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#sequence" class="signatureLink">sequence</a> : int = 0<div class="summaryTableDescription"> 
+	  This property defines the revision sequence number for the event.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#summary" class="signatureLink">summary</a> : String<div class="summaryTableDescription">
+	  This property defines a short summary or subject for the event.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#uid" class="signatureLink">uid</a> : String<div class="summaryTableDescription">
+	  This property defines the persistent, globally unique identifier for the 
+	  object.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#uidPrefix" class="signatureLink">uidPrefix</a> : String = flexSchedulingData@<div class="summaryTableDescription">[static] 
+	  When a specific uid is not specified in the constructor, this prefix is
+	  appended to a random uid created by Flex's UIDUtil.createUID function.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#until" class="signatureLink">until</a> : Date<div class="summaryTableDescription">
+	  The until rule part defines a Date object which bounds the recurrence 
+	  rule in an inclusive manner.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#wkst" class="signatureLink">wkst</a> : int = 1<div class="summaryTableDescription">
+	  The wkst rule part specifies the day on which the workweek starts.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#SchedulingData()" class="signatureLink">SchedulingData</a>(uid:String = null)</div><div class="summaryTableDescription">
+	  If a uid is not provided, a uid will be randomly generated.</div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr></table></div><a name="constantSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Constants</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableConstant"><tr><th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#FREQ_DAILY" class="signatureLink">FREQ_DAILY</a> : String = daily<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#FREQ_MONTHLY" class="signatureLink">FREQ_MONTHLY</a> : String = monthly<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#FREQ_WEEKLY" class="signatureLink">FREQ_WEEKLY</a> : String = weekly<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#FREQ_YEARLY" class="signatureLink">FREQ_YEARLY</a> : String = yearly<div class="summaryTableDescription">[static] </div></td><td class="summaryTableOwnerCol">SchedulingData</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="allDay"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">allDay</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>public var allDay:Boolean</code><p></p><p></p><p>
+	  Whether or not the object is an "all day" event. Strangely, this 
+	  isn't part of the iCalendar spec.
+	  
+	  </p><p> The default value is <code>false</code>.</p></div><a name="propertyDetail"></a><a name="byDay"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">byDay</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var byDay:Array</code><p></p><p></p><p>
+	  Defines what day(s) of the week the recurrence rule applies to.
+	  
+	  <p>The byDay rule part specifies a multidimensional array of days of
+	  the week; 0 indicates Sunday; 1 indicates Monday; 2 indicates Tuesday; 3 
+	  indicates Wednesday; 4 indicates Thursday; 5 indicates Friday; and 6 
+	  indicates Saturday.</p>
+	  
+	  <p>Each byDay value can also be preceded by an array element of positive 
+	  (+n) or negative (-n) integer.  If present, this indicates the nth
+	  occurrence of a specific day within the monthly or yearly "rRule".</p>
+	  
+	  <p>E.G. [ [nth, dayNum], [nth, dayNum], [nth, dayNum] ]. For example, 
+	  [ [1, 0] ] means the first (1) sunday (0) in the rRule. [ [5, 2], [-1, 3]  
+	  ] means that the fifth (5) tuesday (2) in the rRule and the last (-1) 
+	  wednesday (3) in the rRule.  A simple [ [null, 1], [null, 2] ], means all 
+	  mondays and tuesdays, but be sure to set the position element to null.
+	  </p>
+	  
+	  </p><p> The default value is <code>null</code>.</p></div><a name="propertyDetail"></a><a name="byMonth"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">byMonth</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var byMonth:Array</code><p></p><p></p><p>
+	  The byMonth rule part specifies an array of months of the year.  Valid 
+	  values for months are 0 to 11.
+	  
+	  <p>E.G. [ [monthNum], [monthNum], [monthNum] ]</p>
+	  
+	  </p><p> The default value is <code>null</code>.</p></div><a name="propertyDetail"></a><a name="byMonthDay"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">byMonthDay</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var byMonthDay:Array</code><p></p><p></p><p>
+	  The byMonthDay rule part specifies an array of days of the month.  Valid 
+	  values are 1 to 31 or -31 to -1.  For example, -10 represents the tenth 
+	  to the last day of the month.
+	  
+	  <p>The byMonthDay rule part must not be specified when the freq rule
+	  part is set to weekly.</p>
+	  
+	  <p>E.G. [ [monthDayNum], [monthDayNum], [monthDayNum] ]</p>
+	  
+	  </p><p> The default value is <code>null</code>.</p></div><a name="propertyDetail"></a><a name="bySetPos"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">bySetPos</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var bySetPos:Array</code><p></p><p></p><p>
+	  The bySetPos rule part specifies a multidimensional array of values
+	  that corresponds to the nth occurrence within the set of recurrence 
+	  instances specified by the rule.  bySetPos operates on a set of 
+	  recurrence instances in one interval of the recurrence rule.  For 
+	  example, in a weekly rule, the interval would be one week a set of 
+	  recurrence instances starting at the beginning of the interval defined by 
+	  the freq rule part.  Valid values are 1 to 366 or -366 to -1.  It must 
+	  only be used in conjunction with another byxxx rule part.  
+	  
+	  <p>For example "the last work day of the month" could be represented as:
+	  
+	  
+	  freq=monthly;byDay=1,2,3,4,5;bySetPos=-1</p>
+	  
+	  <p>Each bySetPos value can include a positive (+n) or negative (-n)
+	  integer.  If present, this indicates the nth occurrence of the specific 
+	  occurrence within the set of occurrences specified by the rule.</p>
+	  
+	  </p><p> The default value is <code>null</code>.</p></div><a name="propertyDetail"></a><a name="byWeekNo"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">byWeekNo</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var byWeekNo:Array</code><p></p><p></p><p>
+	  The byWeekNo rule part specifies an array of ordinals specifying weeks 
+	  of the year.  Valid values are 1 to 53 or -53 to -1.  This corresponds 
+	  to weeks according to week numbering as defined in [ISO.8601.2004].  
+	  A week is defined as a seven day period, starting on the day of the week 
+	  defined to be the week start (see wkst).  
+	  
+	  <p>Week number one of the calendar year is the first week that contains 
+	  at least four (4) days in that calendar year.</p>
+	  
+	  <p>This rule part must not be used when the freq rule part is set to 
+	  anything other than yearly.  For example, 3 represents the third week 
+	  of the year.</p>
+	  
+	  </p><p> The default value is <code>null</code>.</p></div><a name="propertyDetail"></a><a name="byYearDay"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">byYearDay</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var byYearDay:Array</code><p></p><p></p><p>
+	  The byYearDay rule part specifies an array of days of the year.  Valid 
+	  values are 1 to 366 or -366 to -1.  For example, -1 represents the last 
+	  day of the year (December 31st) and -306 represents the 306th to the last
+	  day of the year (March 1st).  The byYearDay rule part must not be 
+	  specified when the freq rule part is set to daily, weekly, or monthly.
+	  
+	  <p>E.G. [ [yearDay], [yearDay], [yearDay] ]</p>
+	  
+	  </p><p> The default value is <code>null</code>.</p></div><a name="propertyDetail"></a><a name="calendar"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">calendar</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var calendar:<a href="../../../ardisia/scheduling/dataTypes/CalendarDefinitionData.html">CalendarDefinitionData</a></code><p></p><p></p><p>
+	  A reference to the optional CalendarDefinitionData object associated 
+	 	with this object. E.G., this property references the object that defines 
+	 	the calendar that this event is associated with.  "Work", "Personal", 
+	 	etc.
+	 
+	  </p><p> The default value is <code>null</code>.</p></div><a name="propertyDetail"></a><a name="count"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">count</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var count:int</code><p></p><p></p><p>
+	  The count rule part defines the number of occurrences at which to 
+	  range-bound the recurrence. The "dtStart" property value, if specified, 
+	  counts as the first occurrence.
+	  
+	  </p><p> The default value is <code>0</code>.</p></div><a name="propertyDetail"></a><a name="created"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">created</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var created:Date</code><p></p><p></p><p> 
+	  This property specifies the Date when this object was created. This 
+	  property is analogous to the creation date and time for a file in the 
+	  file system.
+	  
+	  </p><p> The default value is <code>null</code>.</p></div><a name="propertyDetail"></a><a name="description"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">description</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var description:String</code><p></p><p></p><p> 
+	  This property provides a more complete description of the object than
+	  "summary".
+	  
+	  </p><p> The default value is <code>""</code>.</p></div><a name="propertyDetail"></a><a name="dtEnd"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dtEnd</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var dtEnd:Date</code><p></p><p></p><p>
+	  This property specifies a Date object for when the event ends.
+	   
+	  </p><p> The default value is <code>null</code>.</p></div><a name="propertyDetail"></a><a name="dtStart"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dtStart</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var dtStart:Date</code><p></p><p></p><p> 
+	  This property specifies a Date object for when the event begins.
+	  
+	  </p><p> The default value is <code>null</code>.</p></div><a name="propertyDetail"></a><a name="exDate"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">exDate</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var exDate:Array</code><p></p><p></p><p>
+	  This property defines the list of Date object exceptions for recurring 
+	  events. Use when a particular date should be deleted from a recurrence 
+	  set.
+	  
+	  </p><p> The default value is <code>null</code>.</p></div><a name="propertyDetail"></a><a name="freq"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">freq</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var freq:String</code><p></p><p></p><p>
+	  The freq rule part identifies the type of recurrence rule. This rule part
+	  must be specified for all recurrence rules, except those defined by
+	  the "rDate" property.
+	  
+	  <p>Set this property and "rDate" to "null" to skip recurrence.</p>
+	  
+	  <p>daily, weekly, monthly, and yearly are the only valid values.</p>
+	  
+	  </p><p> The default value is <code>""</code>.</p></div><a name="propertyDetail"></a><a name="interval"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">interval</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var interval:int = 1</code><p></p><p></p><p>
+	  The interval rule part contains a positive integer representing how 
+	  often the recurrence rule repeats.
+	  
+	  </p><p> The default value is <code>1</code>.</p></div><a name="propertyDetail"></a><a name="lastModified"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">lastModified</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var lastModified:Date</code><p></p><p></p><p>
+	  The property specifies a Date for when the information associated with 
+	  the calendar component was last revised.
+	   
+	  <p>This is analogous to the modification date and time for a file in 
+	  the file system.</p>
+	  
+	  </p><p> The default value is <code>null</code>.</p></div><a name="propertyDetail"></a><a name="location"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">location</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var location:String</code><p></p><p></p><p>
+	  The property defines the intended venue for the event.
+	  
+	  </p><p> The default value is <code>""</code>.</p></div><a name="propertyDetail"></a><a name="rDate"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">rDate</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var rDate:Array</code><p></p><p></p><p>
+	  This property defines an array of Date objects for recurring events.
+	  
+	  <p>Instead of using frequency rules, this type of recurrence just lists
+	  the specific dates for the event to recur.</p>
+	  
+	  <p>Set this property and "freq" to "null" to skip recurrence.</p>
+	  
+	  </p><p> The default value is <code>null</code>.</p></div><a name="propertyDetail"></a><a name="sequence"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">sequence</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var sequence:int = 0</code><p></p><p></p><p> 
+	  This property defines the revision sequence number for the event. In
+	  other words, how many times this object's properties have been changed.
+	  
+	  </p><p> The default value is <code>0</code>.</p></div><a name="propertyDetail"></a><a name="summary"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">summary</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var summary:String</code><p></p><p></p><p>
+	  This property defines a short summary or subject for the event.
+	  
+	  </p><p> The default value is <code>""</code>.</p></div><a name="propertyDetail"></a><a name="uid"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">uid</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var uid:String</code><p></p><p></p><p>
+	  This property defines the persistent, globally unique identifier for the 
+	  object.  See the constructor's notes for more details.
+	  
+	  </p><p> The default value is <code>""</code>.</p></div><a name="propertyDetail"></a><a name="uidPrefix"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">uidPrefix</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static var uidPrefix:String = flexSchedulingData@</code><p></p><p></p><p>
+	  When a specific uid is not specified in the constructor, this prefix is
+	  appended to a random uid created by Flex's UIDUtil.createUID function.
+	  
+	  <p>Useful to be sure the uid is truly unique everywhere.  Change the 
+	  prefix to your organization's name for specific UIDs.</p>
+	  
+	  </p><p> The default value is <code>"flexSchedulingData"</code>.</p></div><a name="propertyDetail"></a><a name="until"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">until</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var until:Date</code><p></p><p></p><p>
+	  The until rule part defines a Date object which bounds the recurrence 
+	  rule in an inclusive manner. If the value specified by until is 
+	  synchronized with the specified recurrence, this date becomes the last
+	  instance of the recurrence. 
+	  
+	  <p>If not present, and the count rule part is also not present, the rRule
+	  is considered to repeat forever.</p>
+	  
+	  </p><p> The default value is <code>null</code>.</p></div><a name="propertyDetail"></a><a name="wkst"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">wkst</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var wkst:int = 1</code><p></p><p></p><p>
+	  The wkst rule part specifies the day on which the workweek starts. 
+	  Valid values are 1, 2, 3, 4, 5, 6 and 0. This is significant when 
+	  a weekly rRule has an interval greater than 1, and a byDay rule part is 
+	  specified. This is also significant when in a yearly rRule when a 
+	  byWeekNo rule part is specified. The default value is 1 (monday).
+	  
+	  </p><p> The default value is <code>1</code>.</p></div><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="SchedulingData()"></a><a name="SchedulingData(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">SchedulingData</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function SchedulingData(uid:String = null)</code><p></p><p>
+	  If a uid is not provided, a uid will be randomly generated.  The uid
+	  must be unique and persistent to the entire world. This is necessary 
+	  because if the SchedulingData objects are exported as a iCalendar text 
+	  stream, it is necessary that no uid collisions will occur.
+	  
+	  <p>By default, all random uids are generated by Flex's UIDUtil.createUID
+	  function and have the defined "uidPrefix" property appended to them.</p>
+	  
+	  </p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">uid</span>:String</code> (default = <code>null</code>)<code></code> &mdash; A unique String that will be the new object's unique id.
+	 </td></tr></table></div><div class="detailSectionHeader">Constant Detail</div><a name="constantDetail"></a><a name="FREQ_DAILY"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">FREQ_DAILY</td><td class="detailHeaderType">Constant</td></tr></table><div class="detailBody"><code>public static const FREQ_DAILY:String = daily</code><p></p></div><a name="constantDetail"></a><a name="FREQ_MONTHLY"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">FREQ_MONTHLY</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const FREQ_MONTHLY:String = monthly</code><p></p></div><a name="constantDetail"></a><a name="FREQ_WEEKLY"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">FREQ_WEEKLY</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const FREQ_WEEKLY:String = weekly</code><p></p></div><a name="constantDetail"></a><a name="FREQ_YEARLY"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">FREQ_YEARLY</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static const FREQ_YEARLY:String = yearly</code><p></p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer></footer><br/>Mon Sep 15 2014, 01:55 AM -06:00  </center></div></body></html><!--<br/>Mon Sep 15 2014, 01:55 AM -06:00  -->

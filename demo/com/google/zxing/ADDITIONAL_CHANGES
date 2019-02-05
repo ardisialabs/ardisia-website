@@ -1,0 +1,18 @@
+CHANGES MADE BY ARDISIA LABS LLC
+
+com.google.zxing.common.flexdatatypes.HashTable.as 
+	line 29
+
+com.google.zxing.common.DefaultGridSampler.as 
+	line 43
+	line 89
+	
+com.google.zxing.common.ResultPointCallback.as
+	line 30
+	line 32
+	
+com.google.zxing.multi.qrcode.detector.MultiFinderPatternFinder.as
+	line 92 
+	
+com.google.zxing.qrcode.QRCodeWriter.as
+	line 44

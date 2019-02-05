@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../../override.css" type="text/css"><title>ardisia.components.barCode.specifications Summary</title></head><body><script language="javascript" type="text/javascript" src="../../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'ardisia.components.barCode.specifications package - API Documentation';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">Ardisia Component Library Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../../package-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../../class-summary.html" onclick="loadClassListFrame('../../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../../all-index-A.html" onclick="loadClassListFrame('../../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../../index.html?ardisia/components/barCode/specifications/package-detail.html&amp;ardisia/components/barCode/specifications/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../../images/logo.jpg" class="logoImage" alt="AdobeLogo" title="AdobeLogo"></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">ardisia.components.barCode.specifications</td><td class="titleTableSubNav" id="subNav" align="right"><a href="package-detail.html#classSummary">Classes</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("ardisia.components.barCode.specifications"); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false	,false,false,false,true,false);}	
+				-->
+			</script><div class="MainContent"><br><br><hr><a name="classSummary"></a><div class="summaryTableTitle">Classes</div><table cellpadding="3" cellspacing="0" class="summaryTable"><tr><th>&nbsp;</th><th width="30%">Class</th><th width="70%">Description</th></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Codabar.html">Codabar</a></td><td class="summaryTableLastCol">
+  See Wikipedia - http://en.wikipedia.org/wiki/Codabar
+  
+  Older standard that typically only represents numeric data, but can 
+  represent a few letters and symbols, but the standard doesn't represent
+  non-numeric data in the body.
+  
+  Because Codabar is self-checking, most standards do not define a check
+  digit.</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Code128.html">Code128</a></td><td class="summaryTableLastCol">
+  See http://www.azalea.com/faq/code-128/#Q3 for a good explanation (and
+  http://en.wikipedia.org/wiki/Code_128)
+  
+  Code set A - alphanumeric data with uppercase letters only and 
+  non-typeable control codes.
+  
+  Code set B - alphanumeric data with upper/lowercase letters, numeric, and
+  punctuation.
+  
+  If a code set is not specified, the output will default to a Code set B
+  output.</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Code39.html">Code39</a></td><td class="summaryTableLastCol">
+  wikipedia: http://en.wikipedia.org/wiki/Code_39
+  
+  Spec includes 43 characters, A through Z, 0 through 9, and special
+  characters.</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Code93.html">Code93</a></td><td class="summaryTableLastCol">
+  See http://en.wikipedia.org/wiki/Code_93
+  
+  Code 93 is designed to encode 26 upper case letters, 10 digits and 7 
+  special characters.</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Ean.html">Ean</a></td><td class="summaryTableLastCol">
+  See Wikipedia http://en.wikipedia.org/wiki/International_Article_Number_(EAN)
+  
+  Superset of the UPC 12 digit system created in Europe.
+  
+  Supports EAN-13 and EAN-8.</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Int25.html">Int25</a></td><td class="summaryTableLastCol">
+  Interleaved 2 of 5.</td></tr><tr class="prow1"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Msi.html">Msi</a></td><td class="summaryTableLastCol">
+  Modified Plessey ("MSI"); see http://en.wikipedia.org/wiki/MSI_Barcode
+  
+  Numeric only, very simple barcode.
+  
+  This implementation does generate the optional check digit.</td></tr><tr class="prow0"><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Upc.html">Upc</a></td><td class="summaryTableLastCol">
+  Universal Product Code; 
+  see http://en.wikipedia.org/wiki/Universal_Product_Code
+  
+  See http://www.morovia.com/education/symbology/upc-e.asp and
+  http://www.barcodeisland.com/upce.phtml#Example for notes on conversion of 
+  UPC-A to UPC-E.
+  
+  UPC-A is a 12 digit numerical system  (11 with a check).</td></tr></table><p></p><div><p></p><center class="copyright"><footer></footer><br/>Mon Sep 15 2014, 01:55 AM -06:00  </center></div></div></body></html><!--<br/>Mon Sep 15 2014, 01:55 AM -06:00  -->

@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../override.css" type="text/css"><meta name="keywords" content="iCalendarRecurrence,ardisia.scheduling.iCalendarRecurrence.iCalendarRecurrence,defaultUntil,byDayFilter,byDayGenerator,byMonthDayFilter,byMonthDayGenerator,byMonthFilter,byMonthGenerator,bySetPosFilter,byWeekNoFilter,byWeekNoGenerator,byYearDayFilter,byYearDayGenerator,checkForShortCircuit,exDateFilter,generateRecurrenceDates,rDateGenerator,runFilters,serialDayGenerator,serialMonthGenerator,serialWeekGenerator,serialYearGenerator"><title>ardisia.scheduling.iCalendarRecurrence.iCalendarRecurrence</title></head><body><script language="javascript" type="text/javascript" src="../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'iCalendarRecurrence - API Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">Ardisia Component Library Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../package-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../class-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../all-index-A.html" onclick="loadClassListFrame('../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../index.html?ardisia/scheduling/iCalendarRecurrence/iCalendarRecurrence.html&amp;ardisia/scheduling/iCalendarRecurrence/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../images/logo.jpg" class="logoImage" alt="AdobeLogo" title="AdobeLogo"></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">iCalendarRecurrence</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("iCalendarRecurrence"); titleBar_setSubNav(false,true,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">ardisia.scheduling.iCalendarRecurrence</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  iCalendarRecurrence</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">iCalendarRecurrence  <img src="../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><p></p><p></p><p></p> 
+  Generates and returns an array of Date objects created by the provided
+  SchedulingData object's recurrence properties.  Follows the iCalendar spec, 
+  located at http://tools.ietf.org/html/rfc5545.
+  
+  <p>If the SchedulingData has infinite recurrence, and "count" or "until" is 
+ 	not set, the default short-circuit is 2 years after dtStart. See the 
+  "defaultUntil" property.</p>
+  
+               <p>Purely static class.</p>
+  
+               <p>See the SchedulingData docs for explanations on the pertinent recurrence
+  properties.</p>
+  
+               <p>
+    +----------+--------+--------+-------+-------+------+-------+------+
+    |          |SECONDLY|MINUTELY|HOURLY |DAILY  |WEEKLY|MONTHLY|YEARLY|
+    +----------+--------+--------+-------+-------+------+-------+------+
+    |BYMONTH   |Limit   |Limit   |Limit  |Limit  |Limit |Limit  |Expand|
+    +----------+--------+--------+-------+-------+------+-------+------+
+    |BYWEEKNO  |N/A     |N/A     |N/A    |N/A    |N/A   |N/A    |Expand|
+    +----------+--------+--------+-------+-------+------+-------+------+
+    |BYYEARDAY |Limit   |Limit   |Limit  |N/A    |N/A   |N/A    |Expand|
+    +----------+--------+--------+-------+-------+------+-------+------+
+    |BYMONTHDAY|Limit   |Limit   |Limit  |Limit  |N/A   |Expand |Expand|
+    +----------+--------+--------+-------+-------+------+-------+------+
+    |BYDAY     |Limit   |Limit   |Limit  |Limit  |Expand|Note 1 |Note 2|
+    +----------+--------+--------+-------+-------+------+-------+------+
+    |BYHOUR    |Limit   |Limit   |Limit  |Expand |Expand|Expand |Expand|
+    +----------+--------+--------+-------+-------+------+-------+------+
+    |BYMINUTE  |Limit   |Limit   |Expand |Expand |Expand|Expand |Expand|
+    +----------+--------+--------+-------+-------+------+-------+------+
+    |BYSECOND  |Limit   |Expand  |Expand |Expand |Expand|Expand |Expand|
+    +----------+--------+--------+-------+-------+------+-------+------+
+    |BYSETPOS  |Limit   |Limit   |Limit  |Limit  |Limit |Limit  |Limit |
+    +----------+--------+--------+-------+-------+------+-------+------+
+ 	
+       Note 1:  Limit if BYMONTHDAY is present; otherwise, special expand
+                for MONTHLY.
+ 	
+       Note 2:  Limit if BYYEARDAY or BYMONTHDAY is present; otherwise,
+                special expand for WEEKLY if BYWEEKNO present; otherwise,
+                special expand for MONTHLY if BYMONTH present; otherwise,
+                special expand for YEARLY.
+  </p>
+            <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#defaultUntil" class="signatureLink">defaultUntil</a> : Date<div class="summaryTableDescription">[static] 
+	  Sets the "until" property if not set in the SchedulingData object.</div></td><td class="summaryTableOwnerCol">iCalendarRecurrence</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#generateRecurrenceDates()" class="signatureLink">generateRecurrenceDates</a>(calendarData:<a href="../../../ardisia/scheduling/dataTypes/SchedulingData.html">SchedulingData</a>, startDt:Date = null):Array</div><div class="summaryTableDescription">[static] 
+	  Returns an array of Date objects for all the dates created by the 
+	  recurrence rules for the provided SchedulingData object.</div></td><td class="summaryTableOwnerCol">iCalendarRecurrence</td></tr></table></div><a name="protectedMethodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Protected Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProtectedMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#byDayFilter()" class="signatureLink">byDayFilter</a>(dt:Date):Boolean</div><div class="summaryTableDescription">[static] 
+	  Filters dates based on the "byDay" property.</div></td><td class="summaryTableOwnerCol">iCalendarRecurrence</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#byDayGenerator()" class="signatureLink">byDayGenerator</a>(yearlyInterval:int = 1, monthlyInterval:int = 1, weeklyInterval:int = 1):void</div><div class="summaryTableDescription">[static] 
+	  Generates dates based on the "byDay" property.</div></td><td class="summaryTableOwnerCol">iCalendarRecurrence</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#byMonthDayFilter()" class="signatureLink">byMonthDayFilter</a>(dt:Date):Boolean</div><div class="summaryTableDescription">[static] 
+	  Filters dates based on the "byMonthDay" property.</div></td><td class="summaryTableOwnerCol">iCalendarRecurrence</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#byMonthDayGenerator()" class="signatureLink">byMonthDayGenerator</a>(yearlyInterval:int = 1, monthlyInterval:int = 1):void</div><div class="summaryTableDescription">[static] 
+	  Generates dates based on the "byMonthDay" property.</div></td><td class="summaryTableOwnerCol">iCalendarRecurrence</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#byMonthFilter()" class="signatureLink">byMonthFilter</a>(dt:Date):Boolean</div><div class="summaryTableDescription">[static] 
+	  Filters dates based on the "byMonth" property.</div></td><td class="summaryTableOwnerCol">iCalendarRecurrence</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#byMonthGenerator()" class="signatureLink">byMonthGenerator</a>(yearlyInterval:int):void</div><div class="summaryTableDescription">[static] 
+	  Generates dates based on the "byMonth" property.</div></td><td class="summaryTableOwnerCol">iCalendarRecurrence</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#bySetPosFilter()" class="signatureLink">bySetPosFilter</a>(intervalDates:Array):Boolean</div><div class="summaryTableDescription">[static] 
+	  Filters dates based on the "bySetPos" property.</div></td><td class="summaryTableOwnerCol">iCalendarRecurrence</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#byWeekNoFilter()" class="signatureLink">byWeekNoFilter</a>(dt:Date):Boolean</div><div class="summaryTableDescription">[static] 
+	  Filters dates based on the "byWeekNo" property.</div></td><td class="summaryTableOwnerCol">iCalendarRecurrence</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#byWeekNoGenerator()" class="signatureLink">byWeekNoGenerator</a>(yearlyInterval:int = 1):void</div><div class="summaryTableDescription">[static] 
+	  Generates dates based on the "byWeekNo" property.</div></td><td class="summaryTableOwnerCol">iCalendarRecurrence</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#byYearDayFilter()" class="signatureLink">byYearDayFilter</a>(dt:Date):Boolean</div><div class="summaryTableDescription">[static] 
+	  Filters dates based on the "byYearDay" property.</div></td><td class="summaryTableOwnerCol">iCalendarRecurrence</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#byYearDayGenerator()" class="signatureLink">byYearDayGenerator</a>(yearlyInterval:int):void</div><div class="summaryTableDescription">[static] 
+	  Generates dates based on the "byYearDay" property.</div></td><td class="summaryTableOwnerCol">iCalendarRecurrence</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#checkForShortCircuit()" class="signatureLink">checkForShortCircuit</a>(dt:Date):Boolean</div><div class="summaryTableDescription">[static] 
+	  Checks if the generators should short circuit and quit.</div></td><td class="summaryTableOwnerCol">iCalendarRecurrence</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#exDateFilter()" class="signatureLink">exDateFilter</a>():void</div><div class="summaryTableDescription">[static] 
+	  Filters dates based on the "exDate" property.</div></td><td class="summaryTableOwnerCol">iCalendarRecurrence</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#rDateGenerator()" class="signatureLink">rDateGenerator</a>():void</div><div class="summaryTableDescription">[static] 
+	  Generates dates using the "rDate" property.</div></td><td class="summaryTableOwnerCol">iCalendarRecurrence</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#runFilters()" class="signatureLink">runFilters</a>(dt:Date):Boolean</div><div class="summaryTableDescription">[static] 
+	  Runs the flagged filters and returns whether the date was filtered
+	  out of the recurrence set.</div></td><td class="summaryTableOwnerCol">iCalendarRecurrence</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#serialDayGenerator()" class="signatureLink">serialDayGenerator</a>(interval:int):void</div><div class="summaryTableDescription">[static] 
+	  Simple serial generator that creates dates in day intervals.</div></td><td class="summaryTableOwnerCol">iCalendarRecurrence</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#serialMonthGenerator()" class="signatureLink">serialMonthGenerator</a>(interval:int):void</div><div class="summaryTableDescription">[static] 
+	  Simple serial generator that creates dates in month intervals.</div></td><td class="summaryTableOwnerCol">iCalendarRecurrence</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#serialWeekGenerator()" class="signatureLink">serialWeekGenerator</a>(interval:int):void</div><div class="summaryTableDescription">[static] 
+	  Simple serial generator that creates dates in week intervals.</div></td><td class="summaryTableOwnerCol">iCalendarRecurrence</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#serialYearGenerator()" class="signatureLink">serialYearGenerator</a>(interval:int):void</div><div class="summaryTableDescription">[static] 
+	  Simple serial generator that creates dates in year intervals.</div></td><td class="summaryTableOwnerCol">iCalendarRecurrence</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="defaultUntil"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">defaultUntil</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>public static var defaultUntil:Date</code><p></p><p></p><p>
+	  Sets the "until" property if not set in the SchedulingData object.
+	  
+	  <p>Useful to avoid infinite recurrence items creating infinite
+	  loops.</p>
+	  
+	  <p>If this property is not set, and the data does not define "until"
+	  or "count", the default short circuit is 2 years after dtStart.</p>
+	  
+	  </p><p> The default value is <code>undefined</code>.</p></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="byDayFilter()"></a><a name="byDayFilter(Date)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">byDayFilter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> protected static function byDayFilter(dt:Date):Boolean</code><p></p><p></p><p>
+	  Filters dates based on the "byDay" property.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">dt</span>:Date</code> &mdash; the Date to check if was filtered
+	 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div><a name="byDayGenerator()"></a><a name="byDayGenerator(int,int,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">byDayGenerator</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function byDayGenerator(yearlyInterval:int = 1, monthlyInterval:int = 1, weeklyInterval:int = 1):void</code><p></p><p></p><p>
+	  Generates dates based on the "byDay" property.   
+	  
+	  <p>The most complex rule, because it must be able to accommodate every 
+	  frequency.</p>
+	  
+	  <p>Note: the weekly frequency requires a different implementation and if 
+	  the interval is greater than 1, wkst is required and relevant.</p>
+	  
+	  <p>The position integer can refer to the month or year depending on the 
+	  recurrence properties. For yearly, the integer is the year position 
+	  unless byMonth is set, in which case the integer is monthly.</p>
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">yearlyInterval</span>:int</code> (default = <code>1</code>)<code></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">monthlyInterval</span>:int</code> (default = <code>1</code>)<code></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">weeklyInterval</span>:int</code> (default = <code>1</code>)<code></code></td></tr></table></p></div><a name="byMonthDayFilter()"></a><a name="byMonthDayFilter(Date)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">byMonthDayFilter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function byMonthDayFilter(dt:Date):Boolean</code><p></p><p></p><p>
+	  Filters dates based on the "byMonthDay" property.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">dt</span>:Date</code> &mdash; the Date to check if was filtered
+	 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div><a name="byMonthDayGenerator()"></a><a name="byMonthDayGenerator(int,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">byMonthDayGenerator</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function byMonthDayGenerator(yearlyInterval:int = 1, monthlyInterval:int = 1):void</code><p></p><p></p><p>
+	  Generates dates based on the "byMonthDay" property.   
+	  
+	  <p>Daily interval is ignored.</p>
+	  
+	  <p>Since byMonthDay can be expressed as positive or negative integers, 
+	  there is a possibility of redundant dates. Convert byMonthDay to a set
+	  of positive integers before looping to ensure uniqueness and that the 
+	  array is in numerical order.</p>
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">yearlyInterval</span>:int</code> (default = <code>1</code>)<code></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">monthlyInterval</span>:int</code> (default = <code>1</code>)<code></code></td></tr></table></p></div><a name="byMonthFilter()"></a><a name="byMonthFilter(Date)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">byMonthFilter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function byMonthFilter(dt:Date):Boolean</code><p></p><p></p><p>
+	  Filters dates based on the "byMonth" property.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">dt</span>:Date</code> &mdash; the Date to check if was filtered
+	 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div><a name="byMonthGenerator()"></a><a name="byMonthGenerator(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">byMonthGenerator</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function byMonthGenerator(yearlyInterval:int):void</code><p></p><p></p><p>
+	  Generates dates based on the "byMonth" property.   
+	  
+	  <p>This generator is only used with "yearly" frequency.</p>
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">yearlyInterval</span>:int</code></td></tr></table></p></div><a name="bySetPosFilter()"></a><a name="bySetPosFilter(Array)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">bySetPosFilter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function bySetPosFilter(intervalDates:Array):Boolean</code><p></p><p></p><p>
+	  Filters dates based on the "bySetPos" property.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">intervalDates</span>:Array</code> &mdash; the Date to check if was filtered
+	 
+	 	</td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; Boolean
+	 </td></tr></table></div><a name="byWeekNoFilter()"></a><a name="byWeekNoFilter(Date)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">byWeekNoFilter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function byWeekNoFilter(dt:Date):Boolean</code><p></p><p></p><p>
+	  Filters dates based on the "byWeekNo" property.
+	  
+	  <p>The iCalendar spec defines the first week in the year to be the first
+	  week with 4 days in the specified year.</p>
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">dt</span>:Date</code> &mdash; the Date to check if was filtered
+	 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div><a name="byWeekNoGenerator()"></a><a name="byWeekNoGenerator(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">byWeekNoGenerator</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function byWeekNoGenerator(yearlyInterval:int = 1):void</code><p></p><p></p><p>
+	  Generates dates based on the "byWeekNo" property.   
+	  
+	  <p>The iCalendar spec is unclear on how byWeekNo is handled when no other 
+	  criteria are provided.</p>
+	  
+	  <p>Does it repeat the month day number or the day of the week? I am 
+	  choosing to repeat the day of the week.  E.G., if dtStart is Sunday, 
+	  Jan 1 and byWeekNo is 10, then find the Sunday in the 10th week.</p>
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">yearlyInterval</span>:int</code> (default = <code>1</code>)<code></code> &mdash; Interval
+	 </td></tr></table></p></div><a name="byYearDayFilter()"></a><a name="byYearDayFilter(Date)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">byYearDayFilter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function byYearDayFilter(dt:Date):Boolean</code><p></p><p></p><p>
+	  Filters dates based on the "byYearDay" property.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">dt</span>:Date</code> &mdash; the Date to check if was filtered
+	 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div><a name="byYearDayGenerator()"></a><a name="byYearDayGenerator(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">byYearDayGenerator</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function byYearDayGenerator(yearlyInterval:int):void</code><p></p><p></p><p>
+	  Generates dates based on the "byYearDay" property.   
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">yearlyInterval</span>:int</code></td></tr></table></p></div><a name="checkForShortCircuit()"></a><a name="checkForShortCircuit(Date)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">checkForShortCircuit</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function checkForShortCircuit(dt:Date):Boolean</code><p></p><p></p><p>
+	  Checks if the generators should short circuit and quit.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">dt</span>:Date</code> &mdash; the date to check
+	 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code></td></tr></table></div><a name="exDateFilter()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">exDateFilter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function exDateFilter():void</code><p></p><p></p><p>
+	  Filters dates based on the "exDate" property.
+	  
+	  </p></div><a name="generateRecurrenceDates()"></a><a name="generateRecurrenceDates(ardisia.scheduling.dataTypes.SchedulingData,Date)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">generateRecurrenceDates</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function generateRecurrenceDates(calendarData:<a href="../../../ardisia/scheduling/dataTypes/SchedulingData.html">SchedulingData</a>, startDt:Date = null):Array</code><p></p><p></p><p>
+	  Returns an array of Date objects for all the dates created by the 
+	  recurrence rules for the provided SchedulingData object.
+	  
+	  <p>Add the optional startDt to generate from that Date, rather than the
+	  dtStart property of the provided SchedulingData object.  The optional
+	  parameter Date will not be returned in the results array.</p>
+	  
+	  <p>Custom start dates are useful to get segments of a infinite 
+	  recurrence loop.</p>
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">calendarData</span>:<a href="../../../ardisia/scheduling/dataTypes/SchedulingData.html">SchedulingData</a></code> &mdash; A SchedulingData object with recurrence
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">startDt</span>:Date</code> (default = <code>null</code>)<code></code> &mdash; The start date to begin calculating recurrence
+	  
+	  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Array</code> &mdash; Array of Date objects
+	 </td></tr></table></div><a name="rDateGenerator()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">rDateGenerator</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function rDateGenerator():void</code><p></p><p></p><p>
+	  Generates dates using the "rDate" property.
+	 </p></div><a name="runFilters()"></a><a name="runFilters(Date)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">runFilters</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function runFilters(dt:Date):Boolean</code><p></p><p></p><p>
+	  Runs the flagged filters and returns whether the date was filtered
+	  out of the recurrence set.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">dt</span>:Date</code> &mdash; The Date object to check if filtered
+	  
+	  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; a Boolean whether the date was filtered out or not
+	 </td></tr></table></div><a name="serialDayGenerator()"></a><a name="serialDayGenerator(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">serialDayGenerator</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function serialDayGenerator(interval:int):void</code><p></p><p></p><p>
+	  Simple serial generator that creates dates in day intervals.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">interval</span>:int</code> &mdash; the number of days between each Date in the set
+	 </td></tr></table></p></div><a name="serialMonthGenerator()"></a><a name="serialMonthGenerator(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">serialMonthGenerator</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function serialMonthGenerator(interval:int):void</code><p></p><p></p><p>
+	  Simple serial generator that creates dates in month intervals.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">interval</span>:int</code> &mdash; the number of months between each Date in the set
+	 </td></tr></table></p></div><a name="serialWeekGenerator()"></a><a name="serialWeekGenerator(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">serialWeekGenerator</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function serialWeekGenerator(interval:int):void</code><p></p><p></p><p>
+	  Simple serial generator that creates dates in week intervals.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">interval</span>:int</code> &mdash; the number of weeks between each Date in the set
+	 </td></tr></table></p></div><a name="serialYearGenerator()"></a><a name="serialYearGenerator(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">serialYearGenerator</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function serialYearGenerator(interval:int):void</code><p></p><p></p><p>
+	  Simple serial generator that creates dates in year intervals.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">interval</span>:int</code> &mdash; the number of years between each Date in the set
+	 </td></tr></table></p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer></footer><br/>Mon Sep 15 2014, 01:55 AM -06:00  </center></div></body></html><!--<br/>Mon Sep 15 2014, 01:55 AM -06:00  -->

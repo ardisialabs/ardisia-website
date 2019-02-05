@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../override.css" type="text/css"><meta name="keywords" content="TimePicker,ardisia.components.timePicker.TimePicker,defaultDropDownTime,openOnFocus,requireSelection,selectedMinutes,snapInterval,validationErrorMessage,buildCollection,convertMinutesToString,convertStringToMinutes,dispose,eventHandler,getClosestIndex,getMinutesIndex,handleKeyboardNavigation,setCenteredVerticalScrollPosition,setCustomSelectedItem,setDefaultDropDownIndex,setHintedIndex,setSelectedMinutes,setSelectedValueIndex,setText,textInputHandler,textInput_changeHandler,timePickerItemMatchingFunction,timePickerLabelFunction,timePickerLabelToItemFunction,validate"><title>ardisia.components.timePicker.TimePicker</title></head><body><script language="javascript" type="text/javascript" src="../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'TimePicker - API Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">Ardisia Component Library Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../package-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../class-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../all-index-A.html" onclick="loadClassListFrame('../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../index.html?ardisia/components/timePicker/TimePicker.html&amp;ardisia/components/timePicker/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../images/logo.jpg" class="logoImage" alt="AdobeLogo" title="AdobeLogo"></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">TimePicker</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("TimePicker"); titleBar_setSubNav(false,true,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">ardisia.components.timePicker</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  TimePicker</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">TimePicker  <img src="../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> spark.components.ComboBox</td></tr></table><p></p><p></p><p></p><p></p>
+  Component designed to help users select a time, specific to the minute.
+  
+  <p>View the technical documentation on the Ardisia Labs website for more
+ 	information.</p>
+            <p></p><p><span class="classHeaderTableLabel">Default MXML Property</span><code>dataProvider</code></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#defaultDropDownTime" class="signatureLink">defaultDropDownTime</a> : Number<div class="summaryTableDescription">
+	  When the user opens the drop down and the "selectedMinutes" property
+	  is not set, this is the default time to center in the drop down and
+	  hint too, but not select.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#openOnFocus" class="signatureLink">openOnFocus</a> : Boolean = true<div class="summaryTableDescription">
+	  Whether the drop down will open on focus.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#requireSelection" class="signatureLink">requireSelection</a> : Boolean<div class="summaryTableDescription">[override] 
+	  Whether the field must have a selectionMinutes value that is not -1;
+	 
+	 	NO_SELECTION is not allowed.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#selectedMinutes" class="signatureLink">selectedMinutes</a> : int<div class="summaryTableDescription">
+	  The user selected value in minutes.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#snapInterval" class="signatureLink">snapInterval</a> : int<div class="summaryTableDescription">
+	  Sets the intervals, in minutes, displayed in the drop down.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#validationErrorMessage" class="signatureLink">validationErrorMessage</a> : String = Not a recognized time. Examples: 7p, 7pm, 7:00pm, 700p, 19:00p, 19PM etc.<div class="summaryTableDescription">
+	  The error message to display when the user entered string fails 
+	  validation and could not be converted to a valid minutes value.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#dispose()" class="signatureLink">dispose</a>():void</div><div class="summaryTableDescription">
+	  Removes the control from the display list, removes event 
+	  listeners, stops timers, and attempts to clear out references to ready 
+	  the component for garbage collection.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setText()" class="signatureLink">setText</a>(value:String):void</div><div class="summaryTableDescription">
+	  Update the text input skin part.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#validate()" class="signatureLink">validate</a>():Boolean</div><div class="summaryTableDescription">
+	  Determines if the selectedItem makes sense, E.G.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr></table></div><a name="protectedMethodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Protected Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProtectedMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#buildCollection()" class="signatureLink">buildCollection</a>():void</div><div class="summaryTableDescription">
+	  Initialize the collection.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#convertMinutesToString()" class="signatureLink">convertMinutesToString</a>(totalMinutes:Number):String</div><div class="summaryTableDescription">
+	  Converts passed minutes value into a human readable time string.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#convertStringToMinutes()" class="signatureLink">convertStringToMinutes</a>(timeString:String):Number</div><div class="summaryTableDescription">
+	  Converts a user entered string to numerical value of minutes.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#eventHandler()" class="signatureLink">eventHandler</a>(event:Event):void</div><div class="summaryTableDescription">
+	  Handles events on the TimePicker.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getClosestIndex()" class="signatureLink">getClosestIndex</a>(minutes:Number):int</div><div class="summaryTableDescription">
+	  Returns the index of the element in the collection with the closest
+	  minutes value relative to the passed value.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getMinutesIndex()" class="signatureLink">getMinutesIndex</a>(minutes:Number):int</div><div class="summaryTableDescription">
+	  Returns the index of the element in the collection with a "minutes"
+	  property that is equal to the passed value.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#handleKeyboardNavigation()" class="signatureLink">handleKeyboardNavigation</a>(event:KeyboardEvent):void</div><div class="summaryTableDescription">
+	  Handles the navigation cursor keys, and moves the proposed selected
+	  index to indices relative to the hinted index so behavior will match
+	  what users will expect from keyboard navigation.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setCenteredVerticalScrollPosition()" class="signatureLink">setCenteredVerticalScrollPosition</a>(index:int):void</div><div class="summaryTableDescription">
+	  Centers the provided index in the drop down and hints at it.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setCustomSelectedItem()" class="signatureLink">setCustomSelectedItem</a>(minutes:int):void</div><div class="summaryTableDescription">
+	  Sets the "text" property on the textInput skin part.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setDefaultDropDownIndex()" class="signatureLink">setDefaultDropDownIndex</a>():void</div><div class="summaryTableDescription">
+	  Centers the defaultDropDownIndex in the dropDown and hints at it.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setHintedIndex()" class="signatureLink">setHintedIndex</a>(index:int):void</div><div class="summaryTableDescription">
+	  Sets the hinted index on the appropriate element.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setSelectedMinutes()" class="signatureLink">setSelectedMinutes</a>(value:Number):void</div><div class="summaryTableDescription">
+	  Updates the "selectedMinutes" property without invalidating properties.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setSelectedValueIndex()" class="signatureLink">setSelectedValueIndex</a>(value:int):void</div><div class="summaryTableDescription">
+	  Sets the selectedIndex to the passed value.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#textInput_changeHandler()" class="signatureLink">textInput_changeHandler</a>(event:TextOperationEvent):void</div><div class="summaryTableDescription">[override] 
+	  Handles changes to the textInput skin part's text property.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#textInputHandler()" class="signatureLink">textInputHandler</a>(event:Event):void</div><div class="summaryTableDescription">
+	 Handles events on the text input skin part.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#timePickerItemMatchingFunction()" class="signatureLink">timePickerItemMatchingFunction</a>(comboBox:ComboBox, inputText:String):Vector.&lt;int&gt;</div><div class="summaryTableDescription">
+	  Function used to match elements in the collection by examining the
+	  user entered string.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#timePickerLabelFunction()" class="signatureLink">timePickerLabelFunction</a>(item:Object):String</div><div class="summaryTableDescription">
+	  Function used to parse a label from the elements in the collection.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#timePickerLabelToItemFunction()" class="signatureLink">timePickerLabelToItemFunction</a>(value:String):Object</div><div class="summaryTableDescription">
+	  Function used to parse a new custom TimePickerData object from a user
+	  entered string.</div></td><td class="summaryTableOwnerCol">TimePicker</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="defaultDropDownTime"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">defaultDropDownTime</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>defaultDropDownTime:Number</code><p></p><p></p><p>
+	  When the user opens the drop down and the "selectedMinutes" property
+	  is not set, this is the default time to center in the drop down and
+	  hint too, but not select.
+	  
+	  </p><p> The default value is <code>480 (8 am)</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get defaultDropDownTime():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set defaultDropDownTime(value:Number):void</code><br/></div><a name="propertyDetail"></a><a name="openOnFocus"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">openOnFocus</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var openOnFocus:Boolean = true</code><p></p><p></p><p>
+	  Whether the drop down will open on focus.
+	  
+	  </p><p> The default value is <code>true</code>.</p></div><a name="propertyDetail"></a><a name="requireSelection"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">requireSelection</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>requireSelection:Boolean</code>[override] <p></p><p></p><p>
+	  Whether the field must have a selectionMinutes value that is not -1;
+	 
+	 	<p>NO_SELECTION is not allowed. A value of 0 will be used instead.</p>
+	  
+	  </p><p> The default value is <code>false</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get requireSelection():Boolean</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set requireSelection(value:Boolean):void</code><br/></div><a name="propertyDetail"></a><a name="selectedMinutes"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">selectedMinutes</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>selectedMinutes:int</code><p></p><p></p><p>
+	  The user selected value in minutes. A value of -1 means no selection.  
+	 
+	 	<p>This property is bindable and bound to 'valueCommit' events.</p>
+	  
+	  </p><p> The default value is <code>-1</code>.</p><p>This property can be used as the source for data binding.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get selectedMinutes():int</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set selectedMinutes(value:int):void</code><br/></div><a name="propertyDetail"></a><a name="snapInterval"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">snapInterval</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>snapInterval:int</code><p></p><p></p><p>
+	  Sets the intervals, in minutes, displayed in the drop down.  E.G. a 
+	  value of 30 indicates that the drop down will display times each 30 
+	  minutes: 7:00am, 7:30am, 8:00am, 8:30am., etc.
+	  
+	  </p><p> The default value is <code>30</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get snapInterval():int</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set snapInterval(value:int):void</code><br/></div><a name="propertyDetail"></a><a name="validationErrorMessage"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">validationErrorMessage</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var validationErrorMessage:String = Not a recognized time. Examples: 7p, 7pm, 7:00pm, 700p, 19:00p, 19PM etc.</code><p></p><p></p><p>
+	  The error message to display when the user entered string fails 
+	  validation and could not be converted to a valid minutes value.
+	  
+	  </p><p> The default value is <code>"Not a recognized time. Examples: 7p, 7pm, 7:00pm, 700p, 19p, etc."</code>.</p></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="buildCollection()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">buildCollection</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> protected function buildCollection():void</code><p></p><p></p><p>
+	  Initialize the collection.  Rebuilds each time the snapInterval is
+	  changed.
+	 </p></div><a name="convertMinutesToString()"></a><a name="convertMinutesToString(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">convertMinutesToString</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected function convertMinutesToString(totalMinutes:Number):String</code><p></p><p></p><p>
+	  Converts passed minutes value into a human readable time string.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">totalMinutes</span>:Number</code> &mdash; the Number of minutes to parse into a string
+	  
+	  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; parsed String
+	 </td></tr></table></div><a name="convertStringToMinutes()"></a><a name="convertStringToMinutes(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">convertStringToMinutes</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected function convertStringToMinutes(timeString:String):Number</code><p></p><p></p><p>
+	  Converts a user entered string to numerical value of minutes. Override
+	  this method to change the format of the time string.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">timeString</span>:String</code> &mdash; the user entered string
+	 
+	  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code> &mdash; a Number representing the number of minutes parsed from the
+	  string
+	 </td></tr></table></div><a name="dispose()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dispose</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function dispose():void</code><p></p><p></p><p>
+	  Removes the control from the display list, removes event 
+	  listeners, stops timers, and attempts to clear out references to ready 
+	  the component for garbage collection.
+	  
+	  <p>Call when you no longer want to simply hide the component and want it 
+	  removed and eligible for GC.</p>
+	 </p></div><a name="eventHandler()"></a><a name="eventHandler(flash.events.Event)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">eventHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected function eventHandler(event:Event):void</code><p></p><p></p><p>
+	  Handles events on the TimePicker.  When the opening the drop down, 
+	  center and hint the selectedIndex or the defaultDropDown index.
+	  
+	  Param event the Event that triggered the handler
+	 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">event</span>:Event</code></td></tr></table></p></div><a name="getClosestIndex()"></a><a name="getClosestIndex(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getClosestIndex</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected function getClosestIndex(minutes:Number):int</code><p></p><p></p><p>
+	  Returns the index of the element in the collection with the closest
+	  minutes value relative to the passed value.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">minutes</span>:Number</code> &mdash; the value to find the closest index for
+	 
+	  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; the index of the closest value in the collection, may be an
+	  exact match
+	 </td></tr></table></div><a name="getMinutesIndex()"></a><a name="getMinutesIndex(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getMinutesIndex</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected function getMinutesIndex(minutes:Number):int</code><p></p><p></p><p>
+	  Returns the index of the element in the collection with a "minutes"
+	  property that is equal to the passed value. Returns -1 if not found.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">minutes</span>:Number</code> &mdash; the value to find the closest index for
+	 
+	  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; the index of the matched value in the collection
+	 </td></tr></table></div><a name="handleKeyboardNavigation()"></a><a name="handleKeyboardNavigation(flash.events.KeyboardEvent)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">handleKeyboardNavigation</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected function handleKeyboardNavigation(event:KeyboardEvent):void</code><p></p><p></p><p>
+	  Handles the navigation cursor keys, and moves the proposed selected
+	  index to indices relative to the hinted index so behavior will match
+	  what users will expect from keyboard navigation.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">event</span>:KeyboardEvent</code> &mdash; the KeyboardEvent passed from the event handler
+	 </td></tr></table></p></div><a name="setCenteredVerticalScrollPosition()"></a><a name="setCenteredVerticalScrollPosition(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setCenteredVerticalScrollPosition</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected function setCenteredVerticalScrollPosition(index:int):void</code><p></p><p></p><p>
+	  Centers the provided index in the drop down and hints at it. Only works 
+	 	for VerticalLayout.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">index</span>:int</code> &mdash; the int of the index to center
+	 </td></tr></table></p></div><a name="setCustomSelectedItem()"></a><a name="setCustomSelectedItem(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setCustomSelectedItem</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected function setCustomSelectedItem(minutes:int):void</code><p></p><p></p><p>
+	  Sets the "text" property on the textInput skin part.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">minutes</span>:int</code></td></tr></table></p></div><a name="setDefaultDropDownIndex()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setDefaultDropDownIndex</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected function setDefaultDropDownIndex():void</code><p></p><p></p><p>
+	  Centers the defaultDropDownIndex in the dropDown and hints at it.
+	 </p></div><a name="setHintedIndex()"></a><a name="setHintedIndex(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setHintedIndex</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected function setHintedIndex(index:int):void</code><p></p><p></p><p>
+	  Sets the hinted index on the appropriate element.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">index</span>:int</code> &mdash; the int index of the renderer to set isHinted to true
+	 </td></tr></table></p></div><a name="setSelectedMinutes()"></a><a name="setSelectedMinutes(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setSelectedMinutes</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected function setSelectedMinutes(value:Number):void</code><p></p><p></p><p>
+	  Updates the "selectedMinutes" property without invalidating properties.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:Number</code> &mdash; the number to update the "selectedMinutes" property to
+	 </td></tr></table></p></div><a name="setSelectedValueIndex()"></a><a name="setSelectedValueIndex(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setSelectedValueIndex</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected function setSelectedValueIndex(value:int):void</code><p></p><p></p><p>
+	  Sets the selectedIndex to the passed value.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:int</code> &mdash; the int to set the selectedIndex to.
+	 </td></tr></table></p></div><a name="setText()"></a><a name="setText(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setText</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function setText(value:String):void</code><p></p><p></p><p>
+	  Update the text input skin part.
+	 
+	 	</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:String</code> &mdash; String
+	 </td></tr></table></p></div><a name="textInput_changeHandler()"></a><a name="textInput_changeHandler(spark.events.TextOperationEvent)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">textInput_changeHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>override protected function textInput_changeHandler(event:TextOperationEvent):void</code><p></p><p></p><p>
+	  Handles changes to the textInput skin part's text property.  
+	  
+	  <p>Overridden to detect when the string is null, to reset the 
+	  hintedIndex.</p>
+	 
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">event</span>:TextOperationEvent</code> &mdash; the TextOperationEvent that triggered the handler
+	 </td></tr></table></p></div><a name="textInputHandler()"></a><a name="textInputHandler(flash.events.Event)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">textInputHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected function textInputHandler(event:Event):void</code><p></p><p></p><p>
+	 Handles events on the text input skin part.
+	 
+	 	</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">event</span>:Event</code> &mdash; the Event that triggered the handler 
+	 </td></tr></table></p></div><a name="timePickerItemMatchingFunction()"></a><a name="timePickerItemMatchingFunction(spark.components.ComboBox,String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">timePickerItemMatchingFunction</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected function timePickerItemMatchingFunction(comboBox:ComboBox, inputText:String):Vector.&lt;int&gt;</code><p></p><p></p><p>
+	  Function used to match elements in the collection by examining the
+	  user entered string.  
+	  
+	  <p>The TimePicker never selects matched elements. Instead, this class 
+	  will hint the closest marched index and center it in the drop down. 
+	  This matches user expected behaviour.</p>
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">comboBox</span>:ComboBox</code> &mdash; the ComboBox to match
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">inputText</span>:String</code> &mdash; the String to match with elements in the collection
+	  
+	  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Vector.&lt;int&gt;</code> &mdash; a vector of indexes
+	 </td></tr></table></div><a name="timePickerLabelFunction()"></a><a name="timePickerLabelFunction(Object)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">timePickerLabelFunction</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected function timePickerLabelFunction(item:Object):String</code><p></p><p></p><p>
+	  Function used to parse a label from the elements in the collection.
+	  
+	  <p>The renderer in the default skin, doesn't use this method.</p>
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">item</span>:Object</code> &mdash; the Object to parse
+	 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code></td></tr></table></div><a name="timePickerLabelToItemFunction()"></a><a name="timePickerLabelToItemFunction(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">timePickerLabelToItemFunction</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected function timePickerLabelToItemFunction(value:String):Object</code><p></p><p></p><p>
+	  Function used to parse a new custom TimePickerData object from a user
+	  entered string.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:String</code> &mdash; the String to use to create a new TimePickerData object
+	 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Object</code></td></tr></table></div><a name="validate()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">validate</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function validate():Boolean</code><p></p><p></p><p>
+	  Determines if the selectedItem makes sense, E.G. can be converted to a
+	  valid minutes quantity, and clears the error string..
+	  
+	  </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Boolean</code> &mdash; a Boolean of success or failure
+	 </td></tr></table></div><br/><br/><hr><br/><p></p><center class="copyright"><footer></footer><br/>Mon Sep 15 2014, 01:55 AM -06:00  </center></div></body></html><!--<br/>Mon Sep 15 2014, 01:55 AM -06:00  -->

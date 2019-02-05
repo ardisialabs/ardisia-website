@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+	 
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name='description' content='The Ardisia Component Library includes over 70+ components to build powerful, robust, and fast applications in Flash and Flex'><title>Ardisia Component Library</title>	    <link rel="stylesheet" href="/css/styles.css" type="text/css" charset="utf-8">
+		<link rel="shortcut icon" href="/favicon.ico" >
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="/js/scripts.js"></script>
+	</head>
+	
+    <body class="overview">
+		<script type="text/javascript" >
+      		$(document).ready(function() {
+				$(".overview-panes-list li a").on("click tap", function() {
+					var clickedNode = this;
+					$(".overview-panes-list li a").each(function(i, node) {
+						if (clickedNode == node) {
+							$(node).addClass("selected");
+							if (i == 0) {
+								$(".paneA").addClass("selected");
+								$(".paneB").removeClass("selected");
+								$(".paneC").removeClass("selected");
+								$(".sliding-panes-container").css("left", "100%");
+							} else if (i == 1) {
+								$(".paneA").removeClass("selected");
+								$(".paneB").addClass("selected");
+								$(".paneC").removeClass("selected");
+								$(".sliding-panes-container").css("left", "0%");
+							} else {
+								$(".paneA").removeClass("selected");
+								$(".paneB").removeClass("selected");
+								$(".paneC").addClass("selected");
+								$(".sliding-panes-container").css("left", "-100%");
+							}
+						} else {
+							$(node).removeClass("selected");
+						}
+					}); 
+				});
+			});
+   		</script>
+   		 
+	<div id="mobile-menu">
+		<div>
+			<div id="logo" class="logo"><span>Ardisia</span><span>Labs</span></div>
+    		<a id="close-button" href="#">
+	    		<svg width="20" height="20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+					<line x1="2" x2="18" y1="2" y2="18" stroke="#FFFFFF" fill="transparent" stroke-linecap="round" stroke-width="4"/>
+					<line x1="2" x2="18" y1="18" y2="2" stroke="#FFFFFF" fill="transparent" stroke-linecap="round" stroke-width="4"/>
+				</svg>
+			</a>
+		</div>
+		<ul>
+			<li><a href="/ardisia-component-library">Components</a>
+				<ul>
+					<li><a href="/ardisia-component-library">Overview</a></li>
+					<li><a href="/demos">Demos</a></li>
+					<li><a href="/faq">FAQ</a></li>
+					<li><a href="/license-faq">License FAQ</a></li>
+				</ul>
+			</li>
+			<li><a href="/support">Support</a>
+				<ul>
+					<li><a href="/support">Overview</a></li>
+					<li><a href="/documentation/">Documentation</a></li>
+					<li><a href="/documentation/asdocs/" target="_blank">ASDocs</a></li>
+					<li><a href="/forums/">Github</a></li>
+				</ul>
+			</li>
+			<li><a href="/services">Services</a></li>
+			<li><a href="/company">Company</a>
+				<ul>
+					<li><a href="/company">Overview</a></li>
+					<li><a href="/company#row-2">Laika</a></li>
+				</ul>
+			</li>
+			<li><a href="/store">Store</a></li>
+			<li><a href="/legal">Legal</a></li>
+		</ul>
+	</div>
+	<div id="contact-details">
+		<div>
+			<span>EMAIL:</span>
+			<span><a href="mailto:info@ardisialabs.com">info@ardisialabs.com</a></span> 
+		</div> 
+	</div>
+	<header class="unselectable"> 
+		<div class="container">
+			<a id="open-contact-details" href="#">
+				Contact
+				<img src="/assets/vector/envelope-closed.min.svg" alt="envelope">
+			</a>
+			<a href="/">
+				<div id="logo" class="logo"><span>Ardisia</span><span>Labs</span></div>
+			</a>
+			<div id="sub-links-container">
+				<ul>
+					<li><a href="/forums/">Github</a></li>
+				</ul>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="/ardisia-component-library"  class='selected'>COMPONENTS</a></li>
+					<li><a href="/support" >SUPPORT</a></li>
+					<li><a href="/services" >SERVICES</a></li>
+					<li><a href="/company" >COMPANY</a></li>
+					<li><a href="/store" >STORE</a></li>
+				</ul>
+			</nav>
+			<a id="mobile-menu-popup-button" href="#">
+				<svg width="30" height="27.5" version="1.1" xmlns="http://www.w3.org/2000/svg">
+					<line x1="2.5" x2="27.5" y1="2.5" y2="2.5" stroke="#FFFFFF" fill="transparent" stroke-linecap="round" stroke-width="5"/>
+					<line x1="2.5" x2="27.5" y1="12.5" y2="12.5" stroke="#FFFFFF" fill="transparent" stroke-linecap="round" stroke-width="5"/>
+					<line x1="2.5" x2="27.5" y1="22.5" y2="22.5" stroke="#FFFFFF" fill="transparent" stroke-linecap="round" stroke-width="5"/>
+				</svg>
+			</a>
+		</div>
+	</header>
+
+		<div class='sublinks'><div class='sublinks-wrapper'><h3>Ardisia Component Library</h3><ul><li><a href='/ardisia-component-library' class='selected'>Overview</a></li><li><a href='/demos' >Demos</a></li><li><a href='/faq' >FAQ</a></li><li><a href='/license-faq' >Licensing</a></li></ul></div></div>    	<main>
+    		<div id="row-1">
+    			<div class="container">
+    				<div>Application Development</div>
+	    			<h1>Make Flex Even More Awesome</h1>
+	    			<div class="tagline">
+	    				The Ardisia Component Library includes over 70 components to make it even easier to build powerful, robust,
+	    				and fast applications in Flash and Flex. Add to that a full documentation suite and good looking 
+	    				themes, and you have all the tools you need to build slick and sleek applications. 
+	    			</div>
+    				<img src="/assets/images/team-thumbs-up.jpg" alt="team with thumbs up"/>
+    			</div>
+    		</div>
+    		<div id="row-2">
+    			<div class="overview-panes-list unselectable">
+					<ul>
+						<li><a>Extensive</a></li>
+						<li><a class="selected">Full Source</a></li>
+						<li><a>Dev Friendly</a></li>
+					</ul>
+				</div>
+				<div class="sliding-panes-container">
+					<div class="pane paneA">
+						<div>
+							<h2>Extensive</h2>
+		    				<div class="tagline">
+		    					Includes a wide range of components from simple UI components 
+		    					to components with extensive functionality, as well as a variety of scheduling, 
+		    					data visualization, layout, and charting components to empower developers to 
+		    					create line-of-business and business intelligence applications.
+		    				</div>
+		    				<h2>Tons of demos and source code</h2>
+		    				<div class="tagline">
+		    					Included with the library are loads of examples, demos, utility classes, and a mountain of source code.
+		    				</div>
+						</div>	
+					</div>
+					<div class="pane paneB selected">
+						<div>
+							<h2>Full Source Included</h2>
+		    				<div class="tagline">
+		    					All source code for all of the components, classes, demos, and themes are included with a standard license. 
+		    					Each license gives a developer the right to alter, edit, and extend the code to create custom components 
+		    					with no requirement to contribute any changes back.
+		    				</div>
+		    				<h2>Say goodbye to 'private'.</h2>
+		    				<div class="tagline">
+		    					Use of private variables and functions are minimized within all code to empower developers to 
+		    					easily customize components by using OOP principles rather than copying and pasting.
+		    				</div>
+		    				<h2>MXML</h2>
+		    				<div class="tagline">
+		    					Components use MXML when appropriate to faciliate customization.
+		    				</div>
+						</div>	
+					</div>
+					<div class="pane paneC">
+						<div>
+							<h2>Developer Friendly</h2>
+		    				<div class="tagline">
+		    					Components are designed to be easy to implement, since they are formatted along 
+		    					the <a target="_blank" href="http://sourceforge.net/adobe/flexsdk/wiki/Coding%20Conventions/">Flex SDK coding conventions</a>
+			    				and are coded in a style that is similar to the style of core Flex components. 
+			    				If you have worked with Flex components, you should be good to go.
+		    				</div>
+		    				<h2>Documentation</h2>
+		    				<div class="tagline">
+		    					Classes and components are documented in plain English, including technical documentation and a full suite of 
+			    				ASDocs that are regularly maintained. 
+		    				</div>
+		    				<h2>Updates</h2>
+		    				<div class="tagline">
+		    					License holders receive all updates, both major and minor, to the software for 1 year. 
+		    				</div>
+						</div>	
+					</div>
+				</div>
+    		</div>
+    		<div id="row-3">
+    			<div class="container">
+    				<div class="content-box">
+    					<div>
+    						<h4>Nice Style</h4>
+							Give your applications the spit and polish of one of the two 
+							included custom themes.
+							<br><br>
+							<a href="/demo" target="_blank">Open Demo.</a>
+    					</div>
+					</div>
+					<div class="content-box">
+						<div>
+							<h4>Licensing</h4>
+							The Library is available under a commercial license<!-- with a 30 day trial offered -->.
+							<br><br>
+							<a href="/faq">Learn More.</a>
+						</div>
+					</div>
+    			</div>
+    		</div>
+    		<div id="row-4">
+    			<div class="container">
+    				<h2>What Now?</h2>
+					<div class="tagline">
+						Take a look at the <a href="/demos">components</a>, or the <a href="/demo/" target="_blank">demo</a><!-- , 
+						or download the <a href="/trial">trial</a>-->.
+					</div>
+    			</div>
+    		</div>
+    	</main>
+    	 
+
+	<footer>
+		<div class="container">
+			<div class="footer-description">
+				Find the good stuff...
+				<a href="/">
+					<div class="logo">
+						<span>Ardisia</span><span>Labs</span>
+					</div>
+				</a>
+			</div>
+			<div class="mobile-sitemap-container">
+				<ul>
+					<li><a href="/ardisia-component-library">Components</a></li>
+					<li><a href="/support">Support</a></li>
+					<li><a href="/services">Services</a></li>
+					<li><a href="/company">Company</a></li>
+					<li><a href="/forum/">Github</a></li>
+					<li><a href="/store">Store</a></li>
+				</ul>
+			</div>	
+			<div class="sitemap-container"><div class="link-category">
+					<h6>Components</h6>
+					<ul>
+						<li><a href="/ardisia-component-library">Overview</a></li>
+						<li><a href="/demos">Demos</a></li>
+						<li><a href="/faq">FAQ</a></li>
+						<li><a href="/license-faq">License FAQ</a></li>
+					</ul>
+				</div><div class="link-category">
+					<h6>Support</h6>
+					<ul>
+						<li><a href="/support">Overview</a></li>
+						<li><a href="/documentation">Documentation</a></li>
+						<li><a href="/documentation/asdocs" target="_blank">ASDocs</a></li>
+						<li><a href="/forum/">Github</a></li>
+					</ul>
+				</div><div class="link-category">
+					<h6>Services</h6>
+					<ul>
+						<li><a href="/services">Overview</a></li>
+					</ul>
+				</div><div class="link-category">
+					<h6>Company</h6>
+					<ul>
+						<li><a href="/company">Overview</a></li>
+						<li><a href="/company#row-2">Laika</a></li>
+					</ul>
+				</div><div class="link-category">
+					<h6>Store</h6>
+					<ul>
+						<li><a href="/store">Purchase</a></li>
+					</ul>
+				</div></div>
+			<div class="legal-links-wrapper">
+				<div>
+					<a href="/legal/">Legal</a>
+					<a href="/legal/terms-of-use" class="right-footer-wrapper">Terms of Use</a>
+					<a href="/legal/privacy">Privacy</a>
+				</div>
+				Copyright © <span id="copydt"></span><script>var el = document.getElementById("copydt");el.innerHTML = new Date().getFullYear()</script> Ardisia Labs LLC
+			</div>
+			<div class="apache-wrapper">
+				<div>
+					Apache Flex&trade; and Apache&trade; are trademarks of The Apache Software Foundation. 
+					The Apache Flex SDK product page is located <a href="http://flex.apache.org/" target="_blank">here.</a>
+					The Apache Software Foundation ("ASF") is not associated with Ardisia Labs and does not 
+					endorse the Ardisia Component Library in any way.
+				</div>
+				<a id="apache-logo-link" href="http://flex.apache.org/"><img src="/assets/images/apache-flex-logo-grayscale.png" alt="Apache Flex Logo"></a>
+			</div>
+		</div>
+	</footer>
+	
+	</body> 
+</html>

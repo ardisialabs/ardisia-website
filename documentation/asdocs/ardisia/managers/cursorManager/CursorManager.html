@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../override.css" type="text/css"><meta name="keywords" content="CursorManager,ardisia.managers.cursorManager.CursorManager,ALL_SCROLL,ARROW_FLEX,ARROW,AUTO,AUTO,BLACK,BUSY,BUTTON,COL_RESIZE,CROSSHAIR,E_W_RESIZE,HAND,HELP,HIGH,IBEAM,LOW,MEDIUM,MOVE,NE_SW_RESIZE,NOT_ALLOWED,NW_SE_RESIZE,N_S_RESIZE,ROTATE,ROW_RESIZE,VERTICAL_TEXT,WHITE,availableCursors,colorMode,currentCursor,currentPriority,cursorList,addContextHandlers,animationHandler,busyHandler,contextMenuHandler,getColor,getCursorData,initializeCursor,mouseHandler,registerCursor,removeAllCursors,removeBusyHandlers,removeContextHandlers,removeCursor,removeFakeCursor,removeGroup,setCursor,unRegisterCursor,unregisterAllCursors,validateCursor"><title>ardisia.managers.cursorManager.CursorManager</title></head><body><script language="javascript" type="text/javascript" src="../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'CursorManager - API Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">Ardisia Component Library Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../package-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../class-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../all-index-A.html" onclick="loadClassListFrame('../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../index.html?ardisia/managers/cursorManager/CursorManager.html&amp;ardisia/managers/cursorManager/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../images/logo.jpg" class="logoImage" alt="AdobeLogo" title="AdobeLogo"></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">CursorManager</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#styleSummary">Styles</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("CursorManager"); titleBar_setSubNav(false,true,true,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">ardisia.managers.cursorManager</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  CursorManager</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">CursorManager  <img src="../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><p></p><p></p><p></p>
+  Displays mouse cursors natively at the OS level.
+ 
+ 	<p>To use a custom cursor, the cursor must be first registered via the 
+  registerCursor() method.  After registration, use the cursor via setCursor().
+  The exception to this rule is that all of the cursors in the DefaultCursors 
+ 	class are always available.</p>
+ 
+ 	             <p>This class is completely static so there is no need to initialize it
+ 	before use.</p>
+ 
+ 	             <p>If a user opens a ContextMenu via a right click, this manager will
+ 	revalidate the cursor to keep any possible custom cursors displayed.  
+ 	However, when a native (OS managed) context menu is opened, very strange 
+ 	unpredictable mouse events are dispatched and custom mouse behaviour isn't 
+ 	reliable. Thus, it is highly recommended that users either route all right 
+ 	clicks to an Ardisia FlexContextMenu or disable the OS context menu 
+ 	altogether by adding a global right_click mouse listener. See the online 
+ 	docs for more information.</p>
+  
+               <p>View the technical documentation on the Ardisia Labs website for more
+ 	information.</p>
+            <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#availableCursors" class="signatureLink">availableCursors</a> : Vector.&lt;<a href="../../../ardisia/managers/cursorManager/data/CursorData.html">CursorData</a>&gt;<div class="summaryTableDescription">[static] 
+	  The vector of CursorData objects that are available because they 
+	  have been registered.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#colorMode" class="signatureLink">colorMode</a> : String = auto<div class="summaryTableDescription">[static] 
+	  The default color mode to use for the default cursors that have both a
+	  black and white version.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#currentCursor" class="signatureLink">currentCursor</a> : <a href="../../../ardisia/managers/cursorManager/data/CursorData.html">CursorData</a><div class="summaryTableDescription">[static] 
+	  Returns the CursorData object for the currently displayed cursor.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#currentPriority" class="signatureLink">currentPriority</a> : Number<div class="summaryTableDescription">[static] 
+	  Returns the priority of the currently displayed cursor.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#cursorList" class="signatureLink">cursorList</a> : Vector.&lt;<a href="../../../ardisia/managers/cursorManager/data/CursorListData.html">CursorListData</a>&gt;<div class="summaryTableDescription">[static] 
+	  The array of cursors to be displayed on the screen, as set by 
+	 	setCursor() calls.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#registerCursor()" class="signatureLink">registerCursor</a>(name:String, hotSpot:Point, assets:Array, frameRate:uint):void</div><div class="summaryTableDescription">[static] 
+	  Register a cursor for use.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeAllCursors()" class="signatureLink">removeAllCursors</a>():void</div><div class="summaryTableDescription">[static] 
+	  Removes all set cursors from the cursorList.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeCursor()" class="signatureLink">removeCursor</a>(name:String, priority:uint, removeAll:Boolean = false):void</div><div class="summaryTableDescription">[static] 
+	  Remove the most recent cursor matching the provided name and priority.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeGroup()" class="signatureLink">removeGroup</a>(group:String):void</div><div class="summaryTableDescription">[static] 
+	  Remove all the cursors with the specified group token.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#setCursor()" class="signatureLink">setCursor</a>(name:String, priority:uint = 1, group:String = null, forceNonNative:Boolean = false, systemManager:ISystemManager = null):void</div><div class="summaryTableDescription">[static] 
+	  Sets a cursor by name, priority, and (optionally) group token.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#unregisterAllCursors()" class="signatureLink">unregisterAllCursors</a>():void</div><div class="summaryTableDescription">[static] 
+	 Remove all registered cursors.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#unRegisterCursor()" class="signatureLink">unRegisterCursor</a>(name:String):void</div><div class="summaryTableDescription">[static] 
+	  Remove a registered cursor.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#validateCursor()" class="signatureLink">validateCursor</a>():void</div><div class="summaryTableDescription">[static] 
+	  Calls to this method will use the cursorList to determine the cursor
+	  that should be displayed.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr></table></div><a name="protectedMethodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Protected Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProtectedMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#addContextHandlers()" class="signatureLink">addContextHandlers</a>(sm:ISystemManager):void</div><div class="summaryTableDescription">[static] 
+	  Add listeners for the context menu.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#animationHandler()" class="signatureLink">animationHandler</a>(event:TimerEvent):void</div><div class="summaryTableDescription">[static] 
+	  Handles the timer event used to animate the fake cursor.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#busyHandler()" class="signatureLink">busyHandler</a>(event:MouseEvent):void</div><div class="summaryTableDescription">[static] 
+	  Handles mouse events when the busy cursor is active.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#contextMenuHandler()" class="signatureLink">contextMenuHandler</a>(event:Event):void</div><div class="summaryTableDescription">[static] 
+	  Handles events on the context menu.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getColor()" class="signatureLink">getColor</a>():String</div><div class="summaryTableDescription">[static] 
+	  Return the cursor color theme to use (black/white).</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getCursorData()" class="signatureLink">getCursorData</a>(name:String):<a href="../../../ardisia/managers/cursorManager/data/CursorData.html">CursorData</a></div><div class="summaryTableDescription">[static] 
+	  Returns the CursorData object in the availableCursors array.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#initializeCursor()" class="signatureLink">initializeCursor</a>(cursor:<a href="../../../ardisia/managers/cursorManager/data/CursorData.html">CursorData</a>):void</div><div class="summaryTableDescription">[static] 
+	  Register the cursor with the player's native mouse cursor support.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#mouseHandler()" class="signatureLink">mouseHandler</a>(event:MouseEvent):void</div><div class="summaryTableDescription">[static] 
+	  Handles mouse events for the fake cursor.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeBusyHandlers()" class="signatureLink">removeBusyHandlers</a>(sysManager:ISystemManager):void</div><div class="summaryTableDescription">[static] 
+	  Remove the mouse event listeners for the busy cursor.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeContextHandlers()" class="signatureLink">removeContextHandlers</a>():void</div><div class="summaryTableDescription">[static] 
+	  Remove listeners for the context menu.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#removeFakeCursor()" class="signatureLink">removeFakeCursor</a>():void</div><div class="summaryTableDescription">[static] 
+	  Remove the fake cursor and all associated listeners.</div></td><td class="summaryTableOwnerCol">CursorManager</td></tr></table></div><a name="styleSummary"></a><div class="summarySection"><div class="summaryTableTitle">Styles</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableStyle"><tr><th>&nbsp;</th><th colspan="2">Style</th><th> Description </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:allScrollCursor"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">allScrollCursor</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Class&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  Embedded graphics class for the all scroll cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:allScrollCursorHotspot"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">allScrollCursorHotspot</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Array&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  The hot spot for the all scroll cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:arrowFlexCursor"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">arrowFlexCursor</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Class&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  Embedded graphics class for the arrow flex cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:arrowFlexCursorHotspot"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">arrowFlexCursorHotspot</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Array&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  The hot spot for the arrow flex cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:busyCursorAssets"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">busyCursorAssets</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Class&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  Class that initializes an array of embedded bitmap data to use for the
+  animated busy cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:busyCursorFramerate"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">busyCursorFramerate</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Number&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  The frame rate for the busy cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:busyCursorHotspot"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">busyCursorHotspot</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Array&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  The hot spot for the busy cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:colResizeCursor"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">colResizeCursor</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Class&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  Embedded graphics class for the column resize cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:colResizeCursorHotspot"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">colResizeCursorHotspot</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Array&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  The hot spot for the column resize cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:crosshairCursor"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">crosshairCursor</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Class&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  Embedded graphics class for the crosshair cursor
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:crosshairCursorHotspot"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">crosshairCursorHotspot</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Array&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  The hot spot for the crosshair cursor.
+  
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:eWResizeCursor"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">eWResizeCursor</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Class&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  Embedded graphics class for the e-w resize cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:eWResizeCursorHotspot"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">eWResizeCursorHotspot</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Array&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  The hot spot for the e-w resize cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:helpCursor"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">helpCursor</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Class&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  Embedded graphics class for the help cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:helpCursorHotspot"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">helpCursorHotspot</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Array&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  The hot spot for the help cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:moveCursor"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">moveCursor</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Class&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  Embedded graphics class for the move cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:moveCursorHotspot"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">moveCursorHotspot</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Array&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  The hot spot for the move cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:neSwResizeCursor"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">neSwResizeCursor</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Class&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  Embedded graphics class for the ne-sw resize cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:neSwResizeCursorHotspot"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">neSwResizeCursorHotspot</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Array&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  The hot spot for the ne-sw resize cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:notAllowedCursor"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">notAllowedCursor</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Class&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  Embedded graphics class for the not allowed cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:notAllowedCursorHotspot"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">notAllowedCursorHotspot</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Array&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  The hot spot for the not allowed cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:nSResizeCursor"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">nSResizeCursor</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Class&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  Embedded graphics class for the n-s resize cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:nSResizeCursorHotspot"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">nSResizeCursorHotspot</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Array&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  The hot spot for the n-s resize cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:nwSeResizeCursor"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">nwSeResizeCursor</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Class&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  Embedded graphics class for the nw-sw resize cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:nwSeResizeCursorHotspot"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">nwSeResizeCursorHotspot</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Array&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  The hot spot for the nw-sw resize cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:rotateCursor"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">rotateCursor</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Class&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  Embedded graphics class for the rotate cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:rotateCursorHotspot"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">rotateCursorHotspot</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Array&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  The hot spot for the rotate cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:rowResizeCursor"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">rowResizeCursor</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Class&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  Embedded graphics class for the row resize cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:rowResizeCursorHotspot"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">rowResizeCursorHotspot</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Array&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  The hot spot for the row resize cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:verticalTextCursor"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">verticalTextCursor</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Class&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  Embedded graphics class for the vertical text cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr><tr class=""><td class="summaryTablePaddingCol"><a name="style:verticalTextCursorHotspot"></a>&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><span class="signatureLink">verticalTextCursorHotspot</span></div></td><td class="summaryTableDescription"><span class="label">Type: </span>Array&nbsp;<span class="label">CSS Inheritance: </span>no<br/>
+  The hot spot for the vertical text cursor.
+ </td><td class="summaryTableOwnerCol">CursorManager</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="availableCursors"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">availableCursors</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>public static var availableCursors:Vector.&lt;<a href="../../../ardisia/managers/cursorManager/data/CursorData.html">CursorData</a>&gt;</code><p></p><p></p><p>
+	  The vector of CursorData objects that are available because they 
+	  have been registered. 
+	  
+	  <p>Cursors listed in the DefaultCursors class are only added here once 
+	  they are displayed via setCursor(), but they always available. 
+	 	DefaultCursors cursors are only added here when they are set to save 
+	 	memory.</p>
+	  
+	  </p><p> The default value is <code>Vector.<CursorData>()</code>.</p></div><a name="propertyDetail"></a><a name="colorMode"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">colorMode</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static var colorMode:String = auto</code><p></p><p></p><p>
+	  The default color mode to use for the default cursors that have both a
+	  black and white version.
+	  
+	  <p>If the mode is "auto", the color will be set to white if the OS flash 
+	  is running inside of is detected as Windows and black is the OS is OS X.
+	  </p>
+	  
+	  <p>Only applies to default cursors not yet registered. To re-register
+	  a default cursor with a new color, unregister the cursor first.</p>
+	  
+	  </p><p> The default value is <code>"auto"</code>.</p></div><a name="propertyDetail"></a><a name="currentCursor"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">currentCursor</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static var currentCursor:<a href="../../../ardisia/managers/cursorManager/data/CursorData.html">CursorData</a></code><p></p><p></p><p>
+	  Returns the CursorData object for the currently displayed cursor.
+	  
+	  </p><p> The default value is <code>null</code>.</p></div><a name="propertyDetail"></a><a name="currentPriority"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">currentPriority</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static var currentPriority:Number</code><p></p><p></p><p>
+	  Returns the priority of the currently displayed cursor.
+	  
+	  </p><p> The default value is <code>NaN</code>.</p></div><a name="propertyDetail"></a><a name="cursorList"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">cursorList</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public static var cursorList:Vector.&lt;<a href="../../../ardisia/managers/cursorManager/data/CursorListData.html">CursorListData</a>&gt;</code><p></p><p></p><p>
+	  The array of cursors to be displayed on the screen, as set by 
+	 	setCursor() calls. Each element in the array is a CursorListData
+	 	object.
+	 
+	  <p>Sorted by priority.  Iterate over the vector to check each cursor.
+	 	</p>
+	  
+	  <p>Can also include flash.ui.MouseCursors or any cursor from the 
+	  DefaultCursors class.</p>
+	  
+	  </p><p> The default value is <code>Vector.<CursorListData></code>.</p></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="addContextHandlers()"></a><a name="addContextHandlers(mx.managers.ISystemManager)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">addContextHandlers</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> protected static function addContextHandlers(sm:ISystemManager):void</code><p></p><p></p><p>
+	  Add listeners for the context menu.
+	 
+	 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">sm</span>:ISystemManager</code> &mdash; the SystemManager 
+	 </td></tr></table></p></div><a name="animationHandler()"></a><a name="animationHandler(flash.events.TimerEvent)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">animationHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function animationHandler(event:TimerEvent):void</code><p></p><p></p><p>
+	  Handles the timer event used to animate the fake cursor.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">event</span>:TimerEvent</code> &mdash; the TimerEvent that triggered the handler
+	 </td></tr></table></p></div><a name="busyHandler()"></a><a name="busyHandler(flash.events.MouseEvent)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">busyHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function busyHandler(event:MouseEvent):void</code><p></p><p></p><p>
+	  Handles mouse events when the busy cursor is active.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">event</span>:MouseEvent</code> &mdash; the MouseEvent that triggered the handler
+	 </td></tr></table></p></div><a name="contextMenuHandler()"></a><a name="contextMenuHandler(flash.events.Event)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contextMenuHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function contextMenuHandler(event:Event):void</code><p></p><p></p><p>
+	  Handles events on the context menu.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">event</span>:Event</code> &mdash; the Event that triggered the handler
+	 </td></tr></table></p></div><a name="getColor()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getColor</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function getColor():String</code><p></p><p></p><p>
+	  Return the cursor color theme to use (black/white). If colorMode is 
+	 	"auto", the color will be automatically determined based on the OS.
+	  
+	  </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; String "white"
+	 </td></tr></table></div><a name="getCursorData()"></a><a name="getCursorData(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getCursorData</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function getCursorData(name:String):<a href="../../../ardisia/managers/cursorManager/data/CursorData.html">CursorData</a></code><p></p><p></p><p>
+	  Returns the CursorData object in the availableCursors array.  
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; the name of the CursorData object to search for
+	  
+	  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../ardisia/managers/cursorManager/data/CursorData.html">CursorData</a></code> &mdash; CursorData object
+	 </td></tr></table></div><a name="initializeCursor()"></a><a name="initializeCursor(ardisia.managers.cursorManager.data.CursorData)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">initializeCursor</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function initializeCursor(cursor:<a href="../../../ardisia/managers/cursorManager/data/CursorData.html">CursorData</a>):void</code><p></p><p></p><p>
+	  Register the cursor with the player's native mouse cursor support.  
+	  Generally, should not be called outside of this class.  
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">cursor</span>:<a href="../../../ardisia/managers/cursorManager/data/CursorData.html">CursorData</a></code></td></tr></table></p></div><a name="mouseHandler()"></a><a name="mouseHandler(flash.events.MouseEvent)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">mouseHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function mouseHandler(event:MouseEvent):void</code><p></p><p></p><p>
+	  Handles mouse events for the fake cursor.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">event</span>:MouseEvent</code> &mdash; the MouseEvent that triggered the handler
+	 </td></tr></table></p></div><a name="registerCursor()"></a><a name="registerCursor(String,flash.geom.Point,Array,uint)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">registerCursor</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function registerCursor(name:String, hotSpot:Point, assets:Array, frameRate:uint):void</code><p></p><p></p><p>
+	  Register a cursor for use.  Cursor names are unique.  If a cursor has 
+	  a name that is already registered, the new cursor will not be registered.
+	  
+	  <p>No need to register OS cursors in the flash.ui.MouseCursors class.
+	  They are always available.  This is true for any cursor found in the
+	  DefaultCursors class.</p>
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; the name of the cursor used in setCursor()
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">hotSpot</span>:Point</code> &mdash; the Point relative to the upper-left origin that defines 
+	  the cursor's hot region
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">assets</span>:Array</code> &mdash; an array of the embedded assets used to define the cursor.  
+	  A typical cursor uses a single asset.  However, animated cursors use 
+	  multiple classes.
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">frameRate</span>:uint</code> &mdash; a uint of the framerate to animate the assets. Only 
+	  relevant if the assets parameter's length is greater than one.
+	 </td></tr></table></p></div><a name="removeAllCursors()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removeAllCursors</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function removeAllCursors():void</code><p></p><p></p><p>
+	  Removes all set cursors from the cursorList. Does not affect the 
+	  registered cursors.  
+	 </p></div><a name="removeBusyHandlers()"></a><a name="removeBusyHandlers(mx.managers.ISystemManager)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removeBusyHandlers</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function removeBusyHandlers(sysManager:ISystemManager):void</code><p></p><p></p><p>
+	  Remove the mouse event listeners for the busy cursor.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">sysManager</span>:ISystemManager</code> &mdash; systemManager to remove the listeners from
+	 </td></tr></table></p></div><a name="removeContextHandlers()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removeContextHandlers</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function removeContextHandlers():void</code><p></p><p></p><p>
+	  Remove listeners for the context menu.
+	 </p></div><a name="removeCursor()"></a><a name="removeCursor(String,uint,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removeCursor</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function removeCursor(name:String, priority:uint, removeAll:Boolean = false):void</code><p></p><p></p><p>
+	  Remove the most recent cursor matching the provided name and priority. 
+	  If multiple cursors with the passed name and priority are set, repeated 
+	  calls to this method would be necessary to remove them all, unless the 
+	  third parameter "removeAll" is set to "true".
+	  
+	  <p>See the removeGroup() method for an alternative method of removing
+	  cursors.</p>
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; the name of the cursor to remove
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">priority</span>:uint</code> &mdash; the uint priority of the cursor to remove
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">removeAll</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; remove all cursors matching the name and priority
+	 </td></tr></table></p></div><a name="removeFakeCursor()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removeFakeCursor</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function removeFakeCursor():void</code><p></p><p></p><p>
+	  Remove the fake cursor and all associated listeners.  No need to remove
+	 	from systemManager.
+	 </p></div><a name="removeGroup()"></a><a name="removeGroup(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">removeGroup</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function removeGroup(group:String):void</code><p></p><p></p><p>
+	  Remove all the cursors with the specified group token. Does not affect 
+	  the registered cursors. Applies to all cursors within the group 
+	  regardless of priority.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">group</span>:String</code> &mdash; the token String
+	 </td></tr></table></p></div><a name="setCursor()"></a><a name="setCursor(String,uint,String,Boolean,mx.managers.ISystemManager)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">setCursor</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function setCursor(name:String, priority:uint = 1, group:String = null, forceNonNative:Boolean = false, systemManager:ISystemManager = null):void</code><p></p><p></p><p>
+	  Sets a cursor by name, priority, and (optionally) group token.
+	  
+	  <p>Note, setting cursor via this method will not necessarily change the
+	  cursor.  The cursor displayed is determined by set cursors' priorities
+	 	with ties going to most recently set cursor.</p>  
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; the name of the cursor to set
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">priority</span>:uint</code> (default = <code>1</code>)<code></code> &mdash; the uint priority
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">group</span>:String</code> (default = <code>null</code>)<code></code> &mdash; an optional string that can serve to group certain cursors
+	  together so they can all be removed as a group
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">forceNonNative</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; true to display the cursor non-natively even if
+	  native cursors are supported
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">systemManager</span>:ISystemManager</code> (default = <code>null</code>)<code></code> &mdash; the SystemManager to attach a contextMenu handler
+	  for a native cursor and the stage to add a fakeCursor if the cursor
+	  is fake
+	 </td></tr></table></p></div><a name="unregisterAllCursors()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">unregisterAllCursors</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function unregisterAllCursors():void</code><p></p><p></p><p>
+	 Remove all registered cursors.
+	 </p></div><a name="unRegisterCursor()"></a><a name="unRegisterCursor(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">unRegisterCursor</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function unRegisterCursor(name:String):void</code><p></p><p></p><p>
+	  Remove a registered cursor.  Note, this method makes the un-registered
+	  cursor unavailable to be set until re-registered.  To simply stop a 
+	  cursor from being displayed without unregistering it, see removeCursor().  
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; the name of the Cursor to un-register
+	 </td></tr></table></p></div><a name="validateCursor()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">validateCursor</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function validateCursor():void</code><p></p><p></p><p>
+	  Calls to this method will use the cursorList to determine the cursor
+	  that should be displayed.
+	  
+	  <p>Call this function to reset the cursor if the cursor was lost for
+	  any reason or other components have changed the cursor.</p>
+	 </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer></footer><br/>Mon Sep 15 2014, 01:55 AM -06:00  </center></div></body></html><!--<br/>Mon Sep 15 2014, 01:55 AM -06:00  -->

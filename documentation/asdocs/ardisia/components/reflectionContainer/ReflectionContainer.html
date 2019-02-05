@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../override.css" type="text/css"><meta name="keywords" content="ReflectionContainer,ardisia.components.reflectionContainer.ReflectionContainer,alphaFrom,alphaTo,alphaToRatio,autoUpdate,blurX,blurY,hideReflection,reflectedElement,skewDegrees,verticalOffset,verticalScale,dispose,eventHandler,layoutReflection,update,updateReflectionBitmapData"><title>ardisia.components.reflectionContainer.ReflectionContainer</title></head><body><script language="javascript" type="text/javascript" src="../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'ReflectionContainer - API Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">Ardisia Component Library Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../package-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../class-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../all-index-A.html" onclick="loadClassListFrame('../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../index.html?ardisia/components/reflectionContainer/ReflectionContainer.html&amp;ardisia/components/reflectionContainer/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../images/logo.jpg" class="logoImage" alt="AdobeLogo" title="AdobeLogo"></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">ReflectionContainer</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("ReflectionContainer"); titleBar_setSubNav(false,true,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">ardisia.components.reflectionContainer</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  ReflectionContainer</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">ReflectionContainer  <img src="../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> spark.components.Group</td></tr></table><p></p><p></p><p></p><p></p>
+  Applies a reflection to any component that implements IBitmapDrawable. 
+  
+  <p>Accepts a single child element, the "reflectedElement".</p>
+  
+               <p>View the technical documentation on the Ardisia Labs website for more
+ 	information.</p>
+            <p></p><p><span class="classHeaderTableLabel">Default MXML Property</span><code>reflectedElement</code></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#alphaFrom" class="signatureLink">alphaFrom</a> : Number<div class="summaryTableDescription">
+	  The alpha to apply at the top of the reflection.</div></td><td class="summaryTableOwnerCol">ReflectionContainer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#alphaTo" class="signatureLink">alphaTo</a> : Number<div class="summaryTableDescription">
+	  The alpha to apply at the bottom of the reflection.</div></td><td class="summaryTableOwnerCol">ReflectionContainer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#alphaToRatio" class="signatureLink">alphaToRatio</a> : Number<div class="summaryTableDescription">
+	  The percentage of the reflection's height at which to apply the "alphaTo"
+	  alpha value.</div></td><td class="summaryTableOwnerCol">ReflectionContainer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#autoUpdate" class="signatureLink">autoUpdate</a> : Boolean<div class="summaryTableDescription">
+	  True to update the reflection each time the reflectedElement dispatches
+	  its FlexEvent.UPDATE_COMPLETE event.</div></td><td class="summaryTableOwnerCol">ReflectionContainer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#blurX" class="signatureLink">blurX</a> : Number<div class="summaryTableDescription">
+	  BlurX for the BlurFilter applied to the reflection.</div></td><td class="summaryTableOwnerCol">ReflectionContainer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#blurY" class="signatureLink">blurY</a> : Number<div class="summaryTableDescription">
+	  BlurY for the BlurFilter applied to the reflection.</div></td><td class="summaryTableOwnerCol">ReflectionContainer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#hideReflection" class="signatureLink">hideReflection</a> : Boolean<div class="summaryTableDescription">
+	  True to hide the reflection.</div></td><td class="summaryTableOwnerCol">ReflectionContainer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#reflectedElement" class="signatureLink">reflectedElement</a> : IVisualElement<div class="summaryTableDescription">
+	  The element to create a reflection of.</div></td><td class="summaryTableOwnerCol">ReflectionContainer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#skewDegrees" class="signatureLink">skewDegrees</a> : Number<div class="summaryTableDescription">
+	  The amount to skew the reflection in degrees.</div></td><td class="summaryTableOwnerCol">ReflectionContainer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#verticalOffset" class="signatureLink">verticalOffset</a> : Number<div class="summaryTableDescription">
+	  The offset from the bottom of the reflectedElement to position the 
+	  reflection.</div></td><td class="summaryTableOwnerCol">ReflectionContainer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#verticalScale" class="signatureLink">verticalScale</a> : Number<div class="summaryTableDescription">
+	  The scaling factor for the reflection along the vertical axis.</div></td><td class="summaryTableOwnerCol">ReflectionContainer</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#dispose()" class="signatureLink">dispose</a>():void</div><div class="summaryTableDescription">
+	 	Call to remove the component from the display list, remove event
+	 	listeners and dispose of bitmap data.</div></td><td class="summaryTableOwnerCol">ReflectionContainer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#update()" class="signatureLink">update</a>():void</div><div class="summaryTableDescription">
+	  Update the reflection.</div></td><td class="summaryTableOwnerCol">ReflectionContainer</td></tr></table></div><a name="protectedMethodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Protected Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProtectedMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#eventHandler()" class="signatureLink">eventHandler</a>(event:Event):void</div><div class="summaryTableDescription">
+	  Hanldes events on this class.</div></td><td class="summaryTableOwnerCol">ReflectionContainer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#layoutReflection()" class="signatureLink">layoutReflection</a>():void</div><div class="summaryTableDescription">
+	  Position and layout the reflection and mask.</div></td><td class="summaryTableOwnerCol">ReflectionContainer</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#updateReflectionBitmapData()" class="signatureLink">updateReflectionBitmapData</a>():void</div><div class="summaryTableDescription">
+	  Update the bitmapData for the reflection.</div></td><td class="summaryTableOwnerCol">ReflectionContainer</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="alphaFrom"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">alphaFrom</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>alphaFrom:Number</code><p></p><p></p><p>
+	  The alpha to apply at the top of the reflection.
+	  
+	  </p><p> The default value is <code>1</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get alphaFrom():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set alphaFrom(value:Number):void</code><br/></div><a name="propertyDetail"></a><a name="alphaTo"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">alphaTo</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>alphaTo:Number</code><p></p><p></p><p>
+	  The alpha to apply at the bottom of the reflection.
+	  
+	  </p><p> The default value is <code>0</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get alphaTo():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set alphaTo(value:Number):void</code><br/></div><a name="propertyDetail"></a><a name="alphaToRatio"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">alphaToRatio</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>alphaToRatio:Number</code><p></p><p></p><p>
+	  The percentage of the reflection's height at which to apply the "alphaTo"
+	  alpha value.
+	  
+	  </p><p> The default value is <code>0.8</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get alphaToRatio():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set alphaToRatio(value:Number):void</code><br/></div><a name="propertyDetail"></a><a name="autoUpdate"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">autoUpdate</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>autoUpdate:Boolean</code><p></p><p></p><p>
+	  True to update the reflection each time the reflectedElement dispatches
+	  its FlexEvent.UPDATE_COMPLETE event.  
+	  
+	  <p>Can be computationally expensive if the reflectedElement is 
+	  invalidated often.  Alternatively, set this property to false and call 
+	  update() manually when the reflection needs to be updated. This
+	 	alternate option is more performant but will require more management.
+	 	</p>
+	 
+	 	<p>This is NOT the same as layout. The container participates in layout
+	 	by default.  This concerns updating the bitmapData in the 
+	 	reflection.</p>
+	  
+	  </p><p> The default value is <code>true</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get autoUpdate():Boolean</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set autoUpdate(value:Boolean):void</code><br/></div><a name="propertyDetail"></a><a name="blurX"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">blurX</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>blurX:Number</code><p></p><p></p><p>
+	  BlurX for the BlurFilter applied to the reflection.  Set to 0 for no
+	 	blur in the x axis. 
+	  
+	  </p><p> The default value is <code>10</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get blurX():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set blurX(value:Number):void</code><br/></div><a name="propertyDetail"></a><a name="blurY"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">blurY</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>blurY:Number</code><p></p><p></p><p>
+	  BlurY for the BlurFilter applied to the reflection.  Set to 0 for no
+	 	blur in the y axis. 
+	  
+	  </p><p> The default value is <code>10</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get blurY():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set blurY(value:Number):void</code><br/></div><a name="propertyDetail"></a><a name="hideReflection"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">hideReflection</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>hideReflection:Boolean</code><p></p><p></p><p>
+	  True to hide the reflection.
+	  
+	  </p><p> The default value is <code>true</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get hideReflection():Boolean</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set hideReflection(value:Boolean):void</code><br/></div><a name="propertyDetail"></a><a name="reflectedElement"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">reflectedElement</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>reflectedElement:IVisualElement</code><p></p><p></p><p>
+	  The element to create a reflection of.  
+	  
+	  <p>Must implement IBitmapDrawable.</p>
+	  
+	  <p>There can only be a single reflectedElement.  If you want to create a 
+	  reflection of a several components as a composite, wrap the elements in
+	  a IVisualElementContainer and set the container as the 
+	 	"reflectedElement".</p>
+	 
+	 	<p>This property is bindable and is bound to "reflectedElementChanged"
+	 	events.</p>
+	  
+	  </p><p> The default value is <code>false</code>.</p><p>This property can be used as the source for data binding.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get reflectedElement():IVisualElement</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set reflectedElement(value:IVisualElement):void</code><br/></div><a name="propertyDetail"></a><a name="skewDegrees"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">skewDegrees</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>skewDegrees:Number</code><p></p><p></p><p>
+	  The amount to skew the reflection in degrees.  
+	  
+	  <p>Value in degrees.</p>
+	  
+	  </p><p> The default value is <code>0</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get skewDegrees():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set skewDegrees(value:Number):void</code><br/></div><a name="propertyDetail"></a><a name="verticalOffset"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">verticalOffset</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>verticalOffset:Number</code><p></p><p></p><p>
+	  The offset from the bottom of the reflectedElement to position the 
+	  reflection. 
+	  
+	  </p><p> The default value is <code>0</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get verticalOffset():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set verticalOffset(value:Number):void</code><br/></div><a name="propertyDetail"></a><a name="verticalScale"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">verticalScale</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>verticalScale:Number</code><p></p><p></p><p>
+	  The scaling factor for the reflection along the vertical axis.
+	  
+	  </p><p> The default value is <code>1</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get verticalScale():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set verticalScale(value:Number):void</code><br/></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="dispose()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">dispose</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function dispose():void</code><p></p><p></p><p>
+	 	Call to remove the component from the display list, remove event
+	 	listeners and dispose of bitmap data.
+	 </p></div><a name="eventHandler()"></a><a name="eventHandler(flash.events.Event)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">eventHandler</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected function eventHandler(event:Event):void</code><p></p><p></p><p>
+	  Hanldes events on this class.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">event</span>:Event</code> &mdash; the Event that triggered this handler
+	 </td></tr></table></p></div><a name="layoutReflection()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">layoutReflection</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected function layoutReflection():void</code><p></p><p></p><p>
+	  Position and layout the reflection and mask.  Not necessarily called by
+	  layout.
+	 </p></div><a name="update()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">update</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function update():void</code><p></p><p></p><p>
+	  Update the reflection.
+	 </p></div><a name="updateReflectionBitmapData()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">updateReflectionBitmapData</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected function updateReflectionBitmapData():void</code><p></p><p></p><p>
+	  Update the bitmapData for the reflection.
+	 </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer></footer><br/>Mon Sep 15 2014, 01:55 AM -06:00  </center></div></body></html><!--<br/>Mon Sep 15 2014, 01:55 AM -06:00  -->

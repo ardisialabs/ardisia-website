@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+<title>CKEditor Test</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+<script src="ckeditor.js"></script>
+
+<script type="text/javascript">
+	
+	function resizeEditor() {
+	
+	    if (!CKEDITOR) 
+        	return;
+        	
+     	CKEDITOR.instances.content.resize('100%', document.body.offsetHeight, false);
+    }
+
+   	window.onresize = function(e) {
+   		resizeEditor();
+  	};
+   
+</script>
+
+<style>
+	html, body {margin:0;padding:0;height:100%;}
+	.cke_chrome {border: 0 none !important;}
+</style>
+
+</head>
+<body>
+	<textarea name="content" id="content">
+		<p>This is content that is editable with CKEditor which is a javascript HTML WYSIWYG editor.</p>
+		<p>This editor is powered by CKEditor, available at http://ckeditor.com/</p>
+	</textarea>
+	<script>
+		CKEDITOR.on('instanceReady', function(e) {
+			 resizeEditor();
+		});
+        CKEDITOR.replace('content', {
+	    	resize_enabled: false,
+	    	removePlugins: 'maximize'
+		});
+    </script>
+</body>
+</html>

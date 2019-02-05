@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+	 
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Library FAQ</title>	    <link rel="stylesheet" href="/css/styles.css" type="text/css" charset="utf-8">
+		<link rel="shortcut icon" href="/favicon.ico" >
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="/js/scripts.js"></script>
+	</head>
+	
+    <body class="faq">
+    	<script type="text/javascript" >
+      		$(document).ready(function () {
+				$('.faq-wrapper .answer').hide();
+				$('.faq-wrapper .question-wrapper').click(function() { 
+					$(this).find('.answer').slideToggle('normal');
+					if ($(this).hasClass('rotate-arrow')) {
+						$(this).removeClass('rotate-arrow')
+					} else {
+						$(this).addClass('rotate-arrow')
+					}
+				}); 
+			});
+			function expandAll() {
+				$('.faq-wrapper .question-wrapper').find('.answer').slideDown();
+				$('.faq-wrapper .question-wrapper').addClass('rotate-arrow');
+			}
+			function collapseAll() {
+				$('.faq-wrapper .question-wrapper').find('.answer').slideUp();
+				$('.faq-wrapper .question-wrapper').removeClass('rotate-arrow');
+			}
+   		</script>
+		 
+	<div id="mobile-menu">
+		<div>
+			<div id="logo" class="logo"><span>Ardisia</span><span>Labs</span></div>
+    		<a id="close-button" href="#">
+	    		<svg width="20" height="20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+					<line x1="2" x2="18" y1="2" y2="18" stroke="#FFFFFF" fill="transparent" stroke-linecap="round" stroke-width="4"/>
+					<line x1="2" x2="18" y1="18" y2="2" stroke="#FFFFFF" fill="transparent" stroke-linecap="round" stroke-width="4"/>
+				</svg>
+			</a>
+		</div>
+		<ul>
+			<li><a href="/ardisia-component-library">Components</a>
+				<ul>
+					<li><a href="/ardisia-component-library">Overview</a></li>
+					<li><a href="/demos">Demos</a></li>
+					<li><a href="/faq">FAQ</a></li>
+					<li><a href="/license-faq">License FAQ</a></li>
+				</ul>
+			</li>
+			<li><a href="/support">Support</a>
+				<ul>
+					<li><a href="/support">Overview</a></li>
+					<li><a href="/documentation/">Documentation</a></li>
+					<li><a href="/documentation/asdocs/" target="_blank">ASDocs</a></li>
+					<li><a href="/forums/">Github</a></li>
+				</ul>
+			</li>
+			<li><a href="/services">Services</a></li>
+			<li><a href="/company">Company</a>
+				<ul>
+					<li><a href="/company">Overview</a></li>
+					<li><a href="/company#row-2">Laika</a></li>
+				</ul>
+			</li>
+			<li><a href="/store">Store</a></li>
+			<li><a href="/legal">Legal</a></li>
+		</ul>
+	</div>
+	<div id="contact-details">
+		<div>
+			<span>EMAIL:</span>
+			<span><a href="mailto:info@ardisialabs.com">info@ardisialabs.com</a></span> 
+		</div> 
+	</div>
+	<header class="unselectable"> 
+		<div class="container">
+			<a id="open-contact-details" href="#">
+				Contact
+				<img src="/assets/vector/envelope-closed.min.svg" alt="envelope">
+			</a>
+			<a href="/">
+				<div id="logo" class="logo"><span>Ardisia</span><span>Labs</span></div>
+			</a>
+			<div id="sub-links-container">
+				<ul>
+					<li><a href="/forums/">Github</a></li>
+				</ul>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="/ardisia-component-library"  class='selected'>COMPONENTS</a></li>
+					<li><a href="/support" >SUPPORT</a></li>
+					<li><a href="/services" >SERVICES</a></li>
+					<li><a href="/company" >COMPANY</a></li>
+					<li><a href="/store" >STORE</a></li>
+				</ul>
+			</nav>
+			<a id="mobile-menu-popup-button" href="#">
+				<svg width="30" height="27.5" version="1.1" xmlns="http://www.w3.org/2000/svg">
+					<line x1="2.5" x2="27.5" y1="2.5" y2="2.5" stroke="#FFFFFF" fill="transparent" stroke-linecap="round" stroke-width="5"/>
+					<line x1="2.5" x2="27.5" y1="12.5" y2="12.5" stroke="#FFFFFF" fill="transparent" stroke-linecap="round" stroke-width="5"/>
+					<line x1="2.5" x2="27.5" y1="22.5" y2="22.5" stroke="#FFFFFF" fill="transparent" stroke-linecap="round" stroke-width="5"/>
+				</svg>
+			</a>
+		</div>
+	</header>
+
+		<div class='sublinks'><div class='sublinks-wrapper'><h3>FAQ</h3><ul><li><a href='/ardisia-component-library' >Overview</a></li><li><a href='/demos' >Demos</a></li><li><a href='/faq' class='selected'>FAQ</a></li><li><a href='/license-faq' >Licensing</a></li></ul></div></div>    	<main>
+    		<div id="row-1">
+    			<div class="container">
+    				<h1>Ardisia Component Library FAQ</h1>
+					<a href="#" onclick="expandAll();">Expand All</a> | <a href="#" onclick="collapseAll();">Collapse All</a>
+		    		<div class="faq-wrapper unselectable">
+		    			<div class="question-wrapper">
+		    				<img src="/assets/vector/arrow.svg"/>
+	    					<h4>What version of Flex should I use with the Library?</h4>
+		    				<div class="answer">
+		    					The library is maintained so that it targets the latest version of Apache Flex.<br><br>However, if 
+								a new version of Apache Flex is released, it may take some time for the Ardisia Component Library
+								to be made compatible with the new version.<br><br>
+								In general, the differences between Apache Flex versions have not been breaking, and have not had a big impact 
+								on compatibility or functionality of the library. Therefore, using an older version of Apache Flex with the library
+								will probably work fine, or require minor adjustments to the code, but this not promised.
+							</div>
+		    			</div>
+		    			<div class="question-wrapper">
+	    					<img src="/assets/vector/arrow.svg"/>
+	    					<h4>How will I receive the Library?</h4>
+		    				<div class="answer">
+		    					The Library is accessed via a private Github repository.  To access the repo, a valid Github account is required. 
+							</div>
+		    			</div>
+		    			<div class="question-wrapper">
+	    					<img src="/assets/vector/arrow.svg"/>
+	    					<h4>What updates to the library will I receive?</h4>
+		    				<div class="answer">
+		    					License holders receive all updates, both major and minor, to the software for 1 year from the date of purchase.
+								After 1 year, license holders may continue receiving updates for a deeply discounted fee listed elsewhere on this site.
+							</div>
+		    			</div>
+		    			<div class="question-wrapper">
+	    					<img src="/assets/vector/arrow.svg"/>
+	    					<h4>What support will I receive?</h4>
+		    				<div class="answer">
+		    					See the <a href="/support">support page.</a>
+							</div>
+		    			</div>
+		    			<div class="question-wrapper">
+	    					<img src="/assets/vector/arrow.svg"/>
+	    					<h4>Are all components included with each license?</h4>
+		    				<div class="answer">
+		    					Yes, each license includes the right to use all the components in the Ardisia Component Library.
+							</div>
+		    			</div>
+		    			<div class="question-wrapper">
+	    					<img src="/assets/vector/arrow.svg"/>
+	    					<h4>How much of the source code can I edit if I purchase a license?</h4>
+		    				<div class="answer">
+		    					All of it.  You can change as much or as little of the source code as you like.
+							</div>
+		    			</div>
+		    			<div class="question-wrapper">
+	    					<img src="/assets/vector/arrow.svg"/>
+	    					<h4>What type of software can I build with the library?</h4>
+		    				<div class="answer">
+		    					Nearly any kind of software: SAAS, internal use, retail, etc. are all allowed.
+							</div>
+		    			</div>
+		    			<div class="question-wrapper">
+	    					<img src="/assets/vector/arrow.svg"/>
+	    					<h4>Must the license be renewed?</h4>
+		    				<div class="answer">
+		    					No, once a license is purchased, the license grant is perpetual.
+							</div>
+		    			</div>
+		    			<div class="question-wrapper">
+	    					<img src="/assets/vector/arrow.svg"/>
+	    					<h4>Will I have to pay royalties if I use the Ardisia Component Library?</h4>
+		    				<div class="answer">
+		    					No.
+							</div>
+		    			</div>
+		    			<div class="question-wrapper">
+	    					<img src="/assets/vector/arrow.svg"/>
+	    					<h4>Are the demo applications included with a single license?</h4>
+		    				<div class="answer">
+		    					Yes, the full source code for all of the demos for all of the components found on this site are included.
+							</div>
+		    			</div>
+		    			<div class="question-wrapper">
+	    					<img src="/assets/vector/arrow.svg"/>
+	    					<h4>Does the Library work in a mobile environment?</h4>
+		    				<div class="answer">
+		    					The Library is focused on the desktop/AIR environment. Although the Library may function within a mobile
+								environment, such scenarios are not tested.
+							</div>
+		    			</div>
+		    			<div class="question-wrapper">
+	    					<img src="/assets/vector/arrow.svg"/>
+	    					<h4>How many applications can I create with a license?</h4>
+		    				<div class="answer">
+		    					An unlimited number of applications.
+							</div>
+		    			</div>
+		    			<div class="question-wrapper">
+	    					<img src="/assets/vector/arrow.svg"/>
+	    					<h4>How is the code formatted?</h4>
+		    				<div class="answer">
+		    					Source code is formatted along the same lines as the SDK. MXML is highly ordered.
+							</div>
+		    			</div>
+		    			<div class="question-wrapper">
+	    					<img src="/assets/vector/arrow.svg"/>
+	    					<h4>Can I use the Library in a commercial application?</h4>
+		    				<div class="answer">
+		    					Yes, you can use the Library to create commercial applications.
+							</div>
+		    			</div>
+		    			<div class="question-wrapper">
+	    					<img src="/assets/vector/arrow.svg"/>
+	    					<h4>Is there any way to get the source code without purchasing a license?</h4>
+		    				<div class="answer">
+		    					No.
+							</div>
+		    			</div>
+		    			<div class="question-wrapper">
+	    					<img src="/assets/vector/arrow.svg"/>
+	    					<h4>What prompted the creation of the Ardisia Component Library?</h4>
+		    				<div class="answer">
+		    					The library was started by a javascript developer who discovered Flex, was blown away by how powerful it is, and wanted to add value to the
+							SDK.
+							</div>
+		    			</div>
+		    			<div class="question-wrapper">
+	    					<img src="/assets/vector/arrow.svg"/>
+	    					<h4>What is the license?</h4>
+		    				<div class="answer">
+		    					See the <a href="/license-faq">license FAQ</a>.
+							</div>
+		    			</div>
+		    			<div class="question-wrapper">
+	    					<img src="/assets/vector/arrow.svg"/>
+	    					<h4>Does the library work with Adobe Flex version 4.6 and lower?</h4>
+		    				<div class="answer">
+		    					See the <a href="/license-faq">license FAQ.</a>
+							</div>
+		    			</div>
+		    		</div>
+		    	</div>
+    		</div>
+    	</main>
+    	 
+
+	<footer>
+		<div class="container">
+			<div class="footer-description">
+				Find the good stuff...
+				<a href="/">
+					<div class="logo">
+						<span>Ardisia</span><span>Labs</span>
+					</div>
+				</a>
+			</div>
+			<div class="mobile-sitemap-container">
+				<ul>
+					<li><a href="/ardisia-component-library">Components</a></li>
+					<li><a href="/support">Support</a></li>
+					<li><a href="/services">Services</a></li>
+					<li><a href="/company">Company</a></li>
+					<li><a href="/forum/">Github</a></li>
+					<li><a href="/store">Store</a></li>
+				</ul>
+			</div>	
+			<div class="sitemap-container"><div class="link-category">
+					<h6>Components</h6>
+					<ul>
+						<li><a href="/ardisia-component-library">Overview</a></li>
+						<li><a href="/demos">Demos</a></li>
+						<li><a href="/faq">FAQ</a></li>
+						<li><a href="/license-faq">License FAQ</a></li>
+					</ul>
+				</div><div class="link-category">
+					<h6>Support</h6>
+					<ul>
+						<li><a href="/support">Overview</a></li>
+						<li><a href="/documentation">Documentation</a></li>
+						<li><a href="/documentation/asdocs" target="_blank">ASDocs</a></li>
+						<li><a href="/forum/">Github</a></li>
+					</ul>
+				</div><div class="link-category">
+					<h6>Services</h6>
+					<ul>
+						<li><a href="/services">Overview</a></li>
+					</ul>
+				</div><div class="link-category">
+					<h6>Company</h6>
+					<ul>
+						<li><a href="/company">Overview</a></li>
+						<li><a href="/company#row-2">Laika</a></li>
+					</ul>
+				</div><div class="link-category">
+					<h6>Store</h6>
+					<ul>
+						<li><a href="/store">Purchase</a></li>
+					</ul>
+				</div></div>
+			<div class="legal-links-wrapper">
+				<div>
+					<a href="/legal/">Legal</a>
+					<a href="/legal/terms-of-use" class="right-footer-wrapper">Terms of Use</a>
+					<a href="/legal/privacy">Privacy</a>
+				</div>
+				Copyright © <span id="copydt"></span><script>var el = document.getElementById("copydt");el.innerHTML = new Date().getFullYear()</script> Ardisia Labs LLC
+			</div>
+			<div class="apache-wrapper">
+				<div>
+					Apache Flex&trade; and Apache&trade; are trademarks of The Apache Software Foundation. 
+					The Apache Flex SDK product page is located <a href="http://flex.apache.org/" target="_blank">here.</a>
+					The Apache Software Foundation ("ASF") is not associated with Ardisia Labs and does not 
+					endorse the Ardisia Component Library in any way.
+				</div>
+				<a id="apache-logo-link" href="http://flex.apache.org/"><img src="/assets/images/apache-flex-logo-grayscale.png" alt="Apache Flex Logo"></a>
+			</div>
+		</div>
+	</footer>
+	
+	</body> 
+</html>

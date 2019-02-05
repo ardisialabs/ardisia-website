@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../override.css" type="text/css"><meta name="keywords" content="Magnifier,ardisia.components.magnifier.Magnifier,displacementScale,magnify,remove"><title>ardisia.components.magnifier.Magnifier</title></head><body><script language="javascript" type="text/javascript" src="../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'Magnifier - API Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">Ardisia Component Library Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../package-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../class-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../all-index-A.html" onclick="loadClassListFrame('../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../index.html?ardisia/components/magnifier/Magnifier.html&amp;ardisia/components/magnifier/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../images/logo.jpg" class="logoImage" alt="AdobeLogo" title="AdobeLogo"></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">Magnifier</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Magnifier"); titleBar_setSubNav(false,true,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">ardisia.components.magnifier</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  Magnifier</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Magnifier  <img src="../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> <a href="../../../ardisia/filters/DisplacementMapFilterFixed.html">DisplacementMapFilterFixed</a> <img src="../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> spark.filters.DisplacementMapFilter</td></tr></table><p></p><p></p><p></p><p></p>
+  Creates a magnification effect over a targeted UIComponent.
+ 
+ 	<p>Can zoom in or zoom out of the targeted component via the 
+ 	"displacementScale" property.</p>
+  
+               <p>Do not add this component to the display list for use. Declare 
+ 	in the declarations tag of an MXML document or in actionscript and call the 
+ 	magnify() method when needed.</p>
+ 
+ 	             <p>View the technical documentation on the Ardisia Labs website for more
+ 	information.</p>
+            <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#displacementScale" class="signatureLink">displacementScale</a> : Number<div class="summaryTableDescription">
+	  Value to scale the pixels for the displacement filter in the x and y
+	  direction.</div></td><td class="summaryTableOwnerCol">Magnifier</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#magnify()" class="signatureLink">magnify</a>(target:UIComponent, regionWidth:Number, regionHeight:Number, xPosition:Number, yPosition:Number):void</div><div class="summaryTableDescription">
+	  Magnifies the passed target at the passed position and size.</div></td><td class="summaryTableOwnerCol">Magnifier</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#remove()" class="signatureLink">remove</a>():void</div><div class="summaryTableDescription">
+	  Remove the magnifier and the displacement effect from the passed target.</div></td><td class="summaryTableOwnerCol">Magnifier</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="displacementScale"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">displacementScale</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>displacementScale:Number</code><p></p><p></p><p>
+	  Value to scale the pixels for the displacement filter in the x and y
+	  direction. Positive values will zoom in and negative values will zoom
+	 	out.
+	  
+	  <p>Think of it as a strength indicator for the zoom.</p>
+	 
+	 	<p>Filter will update and reflect changes to this property the next 
+	 	time magnify() is called.</p>
+	  
+	  </p><p> The default value is <code>50</code>.</p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get displacementScale():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set displacementScale(value:Number):void</code><br/></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="magnify()"></a><a name="magnify(mx.core.UIComponent,Number,Number,Number,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">magnify</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function magnify(target:UIComponent, regionWidth:Number, regionHeight:Number, xPosition:Number, yPosition:Number):void</code><p></p><p></p><p>
+	  Magnifies the passed target at the passed position and size.
+	  
+	  <p>Call remove() to remove the zoom effect and the indicator.</p> 
+	 
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">target</span>:UIComponent</code> &mdash; the UIComponent to magnify
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">regionWidth</span>:Number</code> &mdash; the width of the magnified region
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">regionHeight</span>:Number</code> &mdash; the height of the magnified region
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">xPosition</span>:Number</code> &mdash; the x position to center the zoom
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">yPosition</span>:Number</code> &mdash; the y position to center the zoom
+	 </td></tr></table></p></div><a name="remove()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">remove</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function remove():void</code><p></p><p></p><p>
+	  Remove the magnifier and the displacement effect from the passed target.
+	 </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer></footer><br/>Mon Sep 15 2014, 01:55 AM -06:00  </center></div></body></html><!--<br/>Mon Sep 15 2014, 01:55 AM -06:00  -->

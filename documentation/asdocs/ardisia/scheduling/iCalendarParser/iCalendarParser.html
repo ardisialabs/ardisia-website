@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../override.css" type="text/css"><meta name="keywords" content="iCalendarParser,ardisia.scheduling.iCalendarParser.iCalendarParser,decodeRrule,decodeTimeZoneProperty,escapeChars,exportICalendar,fixOverflow,getDayNum,getDayString,getDecodedDate,getICalendarDateStamp,getICalendarTimeStamp,getOccurrenceDay,importICalendar,readVEventProperty,unfoldAndEscape"><title>ardisia.scheduling.iCalendarParser.iCalendarParser</title></head><body><script language="javascript" type="text/javascript" src="../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'iCalendarParser - API Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">Ardisia Component Library Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../package-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../class-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../all-index-A.html" onclick="loadClassListFrame('../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../index.html?ardisia/scheduling/iCalendarParser/iCalendarParser.html&amp;ardisia/scheduling/iCalendarParser/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../images/logo.jpg" class="logoImage" alt="AdobeLogo" title="AdobeLogo"></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">iCalendarParser</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("iCalendarParser"); titleBar_setSubNav(false,false,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">ardisia.scheduling.iCalendarParser</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  iCalendarParser</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">iCalendarParser  <img src="../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><p></p><p></p><p></p>
+  Both (A) exports an iCalendarData object to an an iCalendar formatted string 
+  and (B) imports an iCalendar formatted string and converts it to an
+  iCalendarData object.
+  
+  <p>Exported data uses UTC time for everything to avoid timezone definitions 
+  due to flash timezone limitations.</p>
+  
+               <p>Importing iCalendar strings will accept events in specific timezones
+  as long as the string complies with the iCalendar spec and describes
+  the timezone UTC offset for both standard and daylight savings. VTIMEZONE
+  definitions should appear above VEVENTS.</p>
+  
+               <p>Supports only 1 standard and 1 daylight savings definition per 
+  timezone.</p>
+  
+               <p>There is only minimal error checking for imported feeds, so be sure the
+  feed complies with the iCalendar spec. 1 Calendar per feed.</p>
+ 
+ 	             <p>View the technical documentation on the Ardisia Labs website for more
+ 	information.</p>
+            <p></p><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#exportICalendar()" class="signatureLink">exportICalendar</a>(calData:<a href="../../../ardisia/scheduling/dataTypes/iCalendarData.html">iCalendarData</a>):String</div><div class="summaryTableDescription">[static] 
+	  Returns a iCalendar formatted string for the iCalendarData object.</div></td><td class="summaryTableOwnerCol">iCalendarParser</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#importICalendar()" class="signatureLink">importICalendar</a>(data:String):<a href="../../../ardisia/scheduling/dataTypes/iCalendarData.html">iCalendarData</a></div><div class="summaryTableDescription">[static] 
+	  Accepts an iCalendar formatted string and returns a iCalendarData 
+	  object.</div></td><td class="summaryTableOwnerCol">iCalendarParser</td></tr></table></div><a name="protectedMethodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Protected Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProtectedMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#decodeRrule()" class="signatureLink">decodeRrule</a>(newSchedulingData:<a href="../../../ardisia/scheduling/dataTypes/SchedulingData.html">SchedulingData</a>, str:String, timeZones:Array):void</div><div class="summaryTableDescription">[static] 
+	  Accepts an iCalendar formatted RRULE string and parses the appropriate
+	  SchedulingData properties.</div></td><td class="summaryTableOwnerCol">iCalendarParser</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#decodeTimeZoneProperty()" class="signatureLink">decodeTimeZoneProperty</a>(timeZone:<a href="../../../ardisia/scheduling/iCalendarParser/data/TimeZone.html">TimeZone</a>, str:String, inDstDefinition:Boolean):void</div><div class="summaryTableDescription">[static] 
+	  Reads a property/value pair from a vtimezone definition and parses
+	  TimeZone properties.</div></td><td class="summaryTableOwnerCol">iCalendarParser</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#escapeChars()" class="signatureLink">escapeChars</a>(str:String):String</div><div class="summaryTableDescription">[static] 
+	  iCalendar spec requires escaping of commas, colons, and semicolons.</div></td><td class="summaryTableOwnerCol">iCalendarParser</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#fixOverflow()" class="signatureLink">fixOverflow</a>(str:String):String</div><div class="summaryTableDescription">[static] 
+	  iCalendar spec expects lines no longer than 75 characters.</div></td><td class="summaryTableOwnerCol">iCalendarParser</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getDayNum()" class="signatureLink">getDayNum</a>(dayStr:String):int</div><div class="summaryTableDescription">[static] 
+	  Converts a iCalendar string representation of a day of the week 
+	  into an actionscript numerical representation of the day of a week.</div></td><td class="summaryTableOwnerCol">iCalendarParser</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getDayString()" class="signatureLink">getDayString</a>(dayNum:int):String</div><div class="summaryTableDescription">[static] 
+	  Converts an actionscript numerical representation of a day of the week 
+	  into an iCalendar string representation of the day of a week.</div></td><td class="summaryTableOwnerCol">iCalendarParser</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getDecodedDate()" class="signatureLink">getDecodedDate</a>(str:String, timeZones:Array = null):Date</div><div class="summaryTableDescription">[static] 
+	  Decodes iCalendar formatted DATE or DATE-TIME values into as3
+	  Dates.</div></td><td class="summaryTableOwnerCol">iCalendarParser</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getICalendarDateStamp()" class="signatureLink">getICalendarDateStamp</a>(date:Date):String</div><div class="summaryTableDescription">[static] 
+	  Converts a Date object to an iCalendar formatted string for "floating 
+	  time", E.G.</div></td><td class="summaryTableOwnerCol">iCalendarParser</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getICalendarTimeStamp()" class="signatureLink">getICalendarTimeStamp</a>(date:Date):String</div><div class="summaryTableDescription">[static] 
+	  Converts a Date object to an iCalendar formatted timestamp string.</div></td><td class="summaryTableOwnerCol">iCalendarParser</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getOccurrenceDay()" class="signatureLink">getOccurrenceDay</a>(year:int, month:int, day:int, interval:int):int</div><div class="summaryTableDescription">[static] 
+	 	Get the day.</div></td><td class="summaryTableOwnerCol">iCalendarParser</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#readVEventProperty()" class="signatureLink">readVEventProperty</a>(newSchedulingData:<a href="../../../ardisia/scheduling/dataTypes/SchedulingData.html">SchedulingData</a>, line:String, timeZones:Array):void</div><div class="summaryTableDescription">[static] 
+	  Decodes a property line contained within a VEVENT and updates the
+	  passed SchedulingData object.</div></td><td class="summaryTableOwnerCol">iCalendarParser</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#unfoldAndEscape()" class="signatureLink">unfoldAndEscape</a>(str:String):String</div><div class="summaryTableDescription">[static] 
+	  Unfolds string by removing > 75 char line breaks and unescapes commas, 
+	  colons, and semi-colons.</div></td><td class="summaryTableOwnerCol">iCalendarParser</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="decodeRrule()"></a><a name="decodeRrule(ardisia.scheduling.dataTypes.SchedulingData,String,Array)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">decodeRrule</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> protected static function decodeRrule(newSchedulingData:<a href="../../../ardisia/scheduling/dataTypes/SchedulingData.html">SchedulingData</a>, str:String, timeZones:Array):void</code><p></p><p></p><p>
+	  Accepts an iCalendar formatted RRULE string and parses the appropriate
+	  SchedulingData properties.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">newSchedulingData</span>:<a href="../../../ardisia/scheduling/dataTypes/SchedulingData.html">SchedulingData</a></code> &mdash; the SchedulingData object being updated
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; the RRULE string
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">timeZones</span>:Array</code> &mdash; array of defined time zones
+	 </td></tr></table></p></div><a name="decodeTimeZoneProperty()"></a><a name="decodeTimeZoneProperty(ardisia.scheduling.iCalendarParser.data.TimeZone,String,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">decodeTimeZoneProperty</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function decodeTimeZoneProperty(timeZone:<a href="../../../ardisia/scheduling/iCalendarParser/data/TimeZone.html">TimeZone</a>, str:String, inDstDefinition:Boolean):void</code><p></p><p></p><p>
+	  Reads a property/value pair from a vtimezone definition and parses
+	  TimeZone properties. Assumes only 1 standard and/or daylight savings
+	  definition.  If multiple, only the last timezone will be used.
+	  
+	  <p>DTSTART is ignored, so if you need multiple time zone definitions,
+	  or definitions that only applied in the past, this method will need
+	  to be extended.</p>
+	  
+	  <p>RRULE is used to define the onset of observance of daylight
+	  savings and standard time.  All the timezones I have seen use an RRULE.
+	  </p>
+	  
+	  <p>FYI, Asia doesn't observe daylight savings. Basically, only North 
+	  America and Europe observe daylight savings. The USA, Canada and Mexico 
+	  observe a general rule of the second Sunday in March and on the first 
+	 	Sunday in November.  Europe generally observes the last Sunday in March 
+	 	and ending on the last Sunday in October.</p>
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">timeZone</span>:<a href="../../../ardisia/scheduling/iCalendarParser/data/TimeZone.html">TimeZone</a></code> &mdash; the TimeZone properties to update
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; the iCalendar formatted line to parse
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">inDstDefinition</span>:Boolean</code> &mdash; a Boolean whether the parsed property is within
+	  a dst definition 
+	 </td></tr></table></p></div><a name="escapeChars()"></a><a name="escapeChars(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">escapeChars</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function escapeChars(str:String):String</code><p></p><p></p><p>
+	  iCalendar spec requires escaping of commas, colons, and semicolons.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; the String to escape
+	 
+	  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; escaped string
+	 </td></tr></table></div><a name="exportICalendar()"></a><a name="exportICalendar(ardisia.scheduling.dataTypes.iCalendarData)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">exportICalendar</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function exportICalendar(calData:<a href="../../../ardisia/scheduling/dataTypes/iCalendarData.html">iCalendarData</a>):String</code><p></p><p></p><p>
+	  Returns a iCalendar formatted string for the iCalendarData object.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">calData</span>:<a href="../../../ardisia/scheduling/dataTypes/iCalendarData.html">iCalendarData</a></code> &mdash; the iCalendarData 
+	  
+	  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; iCalendar parsed string
+	 </td></tr></table></div><a name="fixOverflow()"></a><a name="fixOverflow(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">fixOverflow</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function fixOverflow(str:String):String</code><p></p><p></p><p>
+	  iCalendar spec expects lines no longer than 75 characters.  This method
+	  will fold overflow by adding a CRLF and a single whitespace.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; the string to process
+	 
+	  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the formatted string
+	 </td></tr></table></div><a name="getDayNum()"></a><a name="getDayNum(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getDayNum</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function getDayNum(dayStr:String):int</code><p></p><p></p><p>
+	  Converts a iCalendar string representation of a day of the week 
+	  into an actionscript numerical representation of the day of a week.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">dayStr</span>:String</code> &mdash; the int representation of a day of the week ("SU" = 0)
+	  
+	  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; the String representation
+	 </td></tr></table></div><a name="getDayString()"></a><a name="getDayString(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getDayString</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function getDayString(dayNum:int):String</code><p></p><p></p><p>
+	  Converts an actionscript numerical representation of a day of the week 
+	  into an iCalendar string representation of the day of a week.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">dayNum</span>:int</code> &mdash; the int representation of a day of the week (0 = sunday)
+	  
+	  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; the String representation
+	 </td></tr></table></div><a name="getDecodedDate()"></a><a name="getDecodedDate(String,Array)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getDecodedDate</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function getDecodedDate(str:String, timeZones:Array = null):Date</code><p></p><p></p><p>
+	  Decodes iCalendar formatted DATE or DATE-TIME values into as3
+	  Dates.
+	  
+	  <p>If time is defined as a specific timezone, and the timezone wasn't
+	  defined in the string, the time zone the flash player is running in
+	  will be assumed.</p>
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; the String to decode
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">timeZones</span>:Array</code> (default = <code>null</code>)<code></code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Date</code> &mdash; the decoded Date
+	  
+	 </td></tr></table></div><a name="getICalendarDateStamp()"></a><a name="getICalendarDateStamp(Date)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getICalendarDateStamp</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function getICalendarDateStamp(date:Date):String</code><p></p><p></p><p>
+	  Converts a Date object to an iCalendar formatted string for "floating 
+	  time", E.G. a "date=value" timestring.  This is an allDay event so use
+	  local time definitions.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">date</span>:Date</code> &mdash; the Date object to convert
+	  
+	  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; a iCalendar encoded string
+	 </td></tr></table></div><a name="getICalendarTimeStamp()"></a><a name="getICalendarTimeStamp(Date)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getICalendarTimeStamp</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function getICalendarTimeStamp(date:Date):String</code><p></p><p></p><p>
+	  Converts a Date object to an iCalendar formatted timestamp string.
+	  Not allDay
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">date</span>:Date</code> &mdash; the Date object to convert
+	  
+	  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; a iCalendar encoded string
+	 </td></tr></table></div><a name="getOccurrenceDay()"></a><a name="getOccurrenceDay(int,int,int,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getOccurrenceDay</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function getOccurrenceDay(year:int, month:int, day:int, interval:int):int</code><p></p><p></p><p>
+	 	Get the day.
+	 
+	 	</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">year</span>:int</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">month</span>:int</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">day</span>:int</code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">interval</span>:int</code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; int
+	 </td></tr></table></div><a name="importICalendar()"></a><a name="importICalendar(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">importICalendar</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function importICalendar(data:String):<a href="../../../ardisia/scheduling/dataTypes/iCalendarData.html">iCalendarData</a></code><p></p><p></p><p>
+	  Accepts an iCalendar formatted string and returns a iCalendarData 
+	  object.
+	  
+	  <p>Minimal error checking. String should strictly comply with the
+	  iCalendar spec.</p>
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">data</span>:String</code> &mdash; a String of the iCalendar feed.
+	  
+	  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code><a href="../../../ardisia/scheduling/dataTypes/iCalendarData.html">iCalendarData</a></code> &mdash; iCalendarData object
+	 </td></tr></table></div><a name="readVEventProperty()"></a><a name="readVEventProperty(ardisia.scheduling.dataTypes.SchedulingData,String,Array)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">readVEventProperty</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function readVEventProperty(newSchedulingData:<a href="../../../ardisia/scheduling/dataTypes/SchedulingData.html">SchedulingData</a>, line:String, timeZones:Array):void</code><p></p><p></p><p>
+	  Decodes a property line contained within a VEVENT and updates the
+	  passed SchedulingData object.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">newSchedulingData</span>:<a href="../../../ardisia/scheduling/dataTypes/SchedulingData.html">SchedulingData</a></code> &mdash; the SchedulingData object being constructed
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">line</span>:String</code> &mdash; the text line to decode
+	  
+	  </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">timeZones</span>:Array</code> &mdash; an array of defined time zones
+	 </td></tr></table></p></div><a name="unfoldAndEscape()"></a><a name="unfoldAndEscape(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">unfoldAndEscape</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> protected static function unfoldAndEscape(str:String):String</code><p></p><p></p><p>
+	  Unfolds string by removing > 75 char line breaks and unescapes commas, 
+	  colons, and semi-colons.
+	  
+	  </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; the string to process
+	  
+	  </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code> &mdash; processed string 
+	 </td></tr></table></div><br/><br/><hr><br/><p></p><center class="copyright"><footer></footer><br/>Mon Sep 15 2014, 01:55 AM -06:00  </center></div></body></html><!--<br/>Mon Sep 15 2014, 01:55 AM -06:00  -->

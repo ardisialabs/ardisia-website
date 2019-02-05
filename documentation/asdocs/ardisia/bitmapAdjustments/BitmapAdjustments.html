@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../override.css" type="text/css"><meta name="keywords" content="BitmapAdjustments,ardisia.bitmapAdjustments.BitmapAdjustments,autoLevels,kuwahara,oilPainting,pixelate,posterize,solarize,thresholds,vignette"><title>ardisia.bitmapAdjustments.BitmapAdjustments</title></head><body><script language="javascript" type="text/javascript" src="../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../help.js"></script><script language="javascript" type="text/javascript" src="../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'BitmapAdjustments - API Documentation';
+				var baseRef = '../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">Ardisia Component Library Documentation</td><td class="titleTableTopNav" align="right"><a href="../../package-summary.html" onclick="loadClassListFrame('../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../class-summary.html" onclick="loadClassListFrame('../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../all-index-A.html" onclick="loadClassListFrame('../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../index.html?ardisia/bitmapAdjustments/BitmapAdjustments.html&amp;ardisia/bitmapAdjustments/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../images/logo.jpg" class="logoImage" alt="AdobeLogo" title="AdobeLogo"></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">BitmapAdjustments</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("BitmapAdjustments"); titleBar_setSubNav(false,false,false,false,false,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">ardisia.bitmapAdjustments</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  BitmapAdjustments</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">BitmapAdjustments  <img src="../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr></table><p></p><p></p><p></p><p></p>
+ 	Assorted adjustments and effects for BitmapData.
+ 
+ 	<p>Purely static class.</p>
+            <p></p><br/><hr></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#autoLevels()" class="signatureLink">autoLevels</a>(source:BitmapData):BitmapData</div><div class="summaryTableDescription">[static] 
+	 	Adds an auto color levelling effect to the returned bitmap data by
+	 	stretching out the colors to use the max color range.</div></td><td class="summaryTableOwnerCol">BitmapAdjustments</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#kuwahara()" class="signatureLink">kuwahara</a>(source:BitmapData, size:Number):BitmapData</div><div class="summaryTableDescription">[static] 
+	 	Adds a Kuwahara effect to the returned bitmap data.</div></td><td class="summaryTableOwnerCol">BitmapAdjustments</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#oilPainting()" class="signatureLink">oilPainting</a>(source:BitmapData, levels:int = 24, size:int = 5):BitmapData</div><div class="summaryTableDescription">[static] 
+	 	Adds a oil painting effect to the returned bitmap data.</div></td><td class="summaryTableOwnerCol">BitmapAdjustments</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#pixelate()" class="signatureLink">pixelate</a>(source:BitmapData, yOffset:int = 0, linesToScan:int = -1, type:String = rectangle, size:Number = 10, spacing:int = 0, noise:Number = 0, backgroundColor:Number):BitmapData</div><div class="summaryTableDescription">[static] 
+	 	Adds a pixelation (pointillize) effect to the returned bitmap data.</div></td><td class="summaryTableOwnerCol">BitmapAdjustments</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#posterize()" class="signatureLink">posterize</a>(source:BitmapData, levels:int):BitmapData</div><div class="summaryTableDescription">[static] 
+	 	Adds a posterize effect to the returned bitmap data.</div></td><td class="summaryTableOwnerCol">BitmapAdjustments</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#solarize()" class="signatureLink">solarize</a>(source:BitmapData):BitmapData</div><div class="summaryTableDescription">[static] 
+	 	Adds a solarize effect to the returned bitmap data.</div></td><td class="summaryTableOwnerCol">BitmapAdjustments</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#thresholds()" class="signatureLink">thresholds</a>(source:BitmapData, data:Vector.&lt;<a href="../../ardisia/bitmapAdjustments/dataTypes/ThresholdData.html">ThresholdData</a>&gt;, useGradients:Boolean = false):BitmapData</div><div class="summaryTableDescription">[static] 
+	 	Returns bitmap data with changes to the colors along color intensity 
+	 	thresholds as defined by passed ThresholdData objects.</div></td><td class="summaryTableOwnerCol">BitmapAdjustments</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#vignette()" class="signatureLink">vignette</a>(source:BitmapData, size:Number = 0.8):BitmapData</div><div class="summaryTableDescription">[static] 
+	 	Adds a vignette effect to the returned bitmap data.</div></td><td class="summaryTableOwnerCol">BitmapAdjustments</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="autoLevels()"></a><a name="autoLevels(flash.display.BitmapData)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">autoLevels</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public static function autoLevels(source:BitmapData):BitmapData</code><p></p><p></p><p>
+	 	Adds an auto color levelling effect to the returned bitmap data by
+	 	stretching out the colors to use the max color range. 
+	 
+	 	</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:BitmapData</code> &mdash; BitmapData
+	 
+	 	</td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>BitmapData</code> &mdash; BitmapData
+	 </td></tr></table></div><a name="kuwahara()"></a><a name="kuwahara(flash.display.BitmapData,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">kuwahara</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function kuwahara(source:BitmapData, size:Number):BitmapData</code><p></p><p></p><p>
+	 	Adds a Kuwahara effect to the returned bitmap data.  
+	 
+	 	<p>See http://en.wikipedia.org/wiki/Kuwahara_filter.</p>
+	 
+	 	<p>Drops alpha channel.</p>
+	 
+	 	</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:BitmapData</code> &mdash; BitmapData
+	 
+	 	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">size</span>:Number</code> &mdash; Number
+	 
+	 	</td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>BitmapData</code> &mdash; BitmapData
+	 </td></tr></table></div><a name="oilPainting()"></a><a name="oilPainting(flash.display.BitmapData,int,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">oilPainting</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function oilPainting(source:BitmapData, levels:int = 24, size:int = 5):BitmapData</code><p></p><p></p><p>
+	 	Adds a oil painting effect to the returned bitmap data.
+	 
+	 	</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:BitmapData</code> &mdash; BitmapData
+	 
+	 	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">levels</span>:int</code> (default = <code>24</code>)<code></code> &mdash; int The number of intensity levels
+	 
+	 	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">size</span>:int</code> (default = <code>5</code>)<code></code> &mdash; int (higher is slower)
+	 
+	 	</td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>BitmapData</code> &mdash; BitmapData
+	 </td></tr></table></div><a name="pixelate()"></a><a name="pixelate(flash.display.BitmapData,int,int,String,Number,int,Number,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">pixelate</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function pixelate(source:BitmapData, yOffset:int = 0, linesToScan:int = -1, type:String = rectangle, size:Number = 10, spacing:int = 0, noise:Number = 0, backgroundColor:Number):BitmapData</code><p></p><p></p><p>
+	 	Adds a pixelation (pointillize) effect to the returned bitmap data.
+	 
+	 	<p>Supports returning slivers of the source to process line by 
+	 	line.</p>
+	 
+	 	</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:BitmapData</code> &mdash; BitmapData
+	 
+	 	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">yOffset</span>:int</code> (default = <code>0</code>)<code></code> &mdash; int Offset from the top to start processing
+	 
+	 	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">linesToScan</span>:int</code> (default = <code>-1</code>)<code></code> &mdash; int Number of lines to process. Use -1 to process
+	 	the entire source bitmap
+	 
+	 	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">type</span>:String</code> (default = <code>rectangle</code>)<code></code> &mdash; String shape to use, see PixelateTypes
+	 
+	 	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">size</span>:Number</code> (default = <code>10</code>)<code></code> &mdash; Number Distance from the top to start processing
+	 
+	 	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">spacing</span>:int</code> (default = <code>0</code>)<code></code> &mdash; int Spacing between shapes
+	 
+	 	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">noise</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; Number Number percent of size to randomize
+	 
+	 	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">backgroundColor</span>:Number</code> (default = <code>NaN</code>)<code></code> &mdash; Number NaN to use a transparent background
+	 
+	 	</td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>BitmapData</code> &mdash; BitmapData
+	 </td></tr></table></div><a name="posterize()"></a><a name="posterize(flash.display.BitmapData,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">posterize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function posterize(source:BitmapData, levels:int):BitmapData</code><p></p><p></p><p>
+	 	Adds a posterize effect to the returned bitmap data. 
+	 
+	 	<p>See http://en.wikipedia.org/wiki/Posterization</p>
+	 
+	 	</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:BitmapData</code> &mdash; BitmapData
+	 
+	 	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">levels</span>:int</code> &mdash; int number of color levels
+	 
+	 	</td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>BitmapData</code> &mdash; BitmapData
+	 </td></tr></table></div><a name="solarize()"></a><a name="solarize(flash.display.BitmapData)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">solarize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function solarize(source:BitmapData):BitmapData</code><p></p><p></p><p>
+	 	Adds a solarize effect to the returned bitmap data.
+	 
+	 	<p>See http://en.wikipedia.org/wiki/Solarisation</p>
+	 
+	 	</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:BitmapData</code> &mdash; BitmapData
+	 
+	 	</td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>BitmapData</code> &mdash; BitmapData 
+	 </td></tr></table></div><a name="thresholds()"></a><a name="thresholds(flash.display.BitmapData,Vector$ardisia.bitmapAdjustments.dataTypes.ThresholdData,Boolean)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">thresholds</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function thresholds(source:BitmapData, data:Vector.&lt;<a href="../../ardisia/bitmapAdjustments/dataTypes/ThresholdData.html">ThresholdData</a>&gt;, useGradients:Boolean = false):BitmapData</code><p></p><p></p><p>
+	 	Returns bitmap data with changes to the colors along color intensity 
+	 	thresholds as defined by passed ThresholdData objects.
+	 
+	 	<p>Each call must pass at least 2 ThresholdData objects to the "data"
+	 	parameter.</p>
+	 
+	 	<p>If "useGradients" is true, function expects a ThresholdData object
+	 	that defines a color at a ratio of 0.</p>
+	 
+	 	</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:BitmapData</code> &mdash; BitmapData
+	 
+	 	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">data</span>:Vector.&lt;<a href="../../ardisia/bitmapAdjustments/dataTypes/ThresholdData.html">ThresholdData</a>&gt;</code> &mdash; Vector.ThresholdData min length of 2
+	 
+	 	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">useGradients</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Boolean true to calculate color based on colors
+	 	defined at the ends of thresholds. 
+	 
+	 	</td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>BitmapData</code> &mdash; BitmapData
+	 </td></tr></table></div><a name="vignette()"></a><a name="vignette(flash.display.BitmapData,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">vignette</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public static function vignette(source:BitmapData, size:Number = 0.8):BitmapData</code><p></p><p></p><p>
+	 	Adds a vignette effect to the returned bitmap data. 
+	 
+	 	<p>See http://en.wikipedia.org/wiki/Vignette_(graphic_design)</p>
+	 
+	 	</p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">source</span>:BitmapData</code> &mdash; BitmapData
+	 
+	 	</td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">size</span>:Number</code> (default = <code>0.8</code>)<code></code> &mdash; Number percentage of maximum effect (0 to 1)
+	 
+	 	</td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>BitmapData</code> &mdash; BitmapData
+	 </td></tr></table></div><br/><br/><hr><br/><p></p><center class="copyright"><footer></footer><br/>Mon Sep 15 2014, 01:55 AM -06:00  </center></div></body></html><!--<br/>Mon Sep 15 2014, 01:55 AM -06:00  -->

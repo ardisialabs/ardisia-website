@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index>
+	<title>Source of ArdisiaDemo</title>
+	<nodes>
+		<node label="src">
+			<node icon="packageIcon" label="modules" expanded="true">
+				<node icon="mxmlIcon" label="AccordionModule.mxml" url="source/modules/AccordionModule.mxml.html"/>
+				<node icon="mxmlIcon" label="AnimatedImageModule.mxml" url="source/modules/AnimatedImageModule.mxml.html"/>
+				<node icon="mxmlIcon" label="AutoCompleteModule.mxml" url="source/modules/AutoCompleteModule.mxml.html"/>
+				<node icon="mxmlIcon" label="AutoFitTextModule.mxml" url="source/modules/AutoFitTextModule.mxml.html"/>
+				<node icon="mxmlIcon" label="BarCodeModule.mxml" url="source/modules/BarCodeModule.mxml.html"/>
+				<node icon="mxmlIcon" label="BitmapAdjustmentsModule.mxml" url="source/modules/BitmapAdjustmentsModule.mxml.html"/>
+				<node icon="mxmlIcon" label="ButtonBarModule.mxml" url="source/modules/ButtonBarModule.mxml.html"/>
+				<node icon="mxmlIcon" label="CalculatorModule.mxml" url="source/modules/CalculatorModule.mxml.html"/>
+				<node icon="mxmlIcon" label="CalendarModule.mxml" url="source/modules/CalendarModule.mxml.html"/>
+				<node icon="mxmlIcon" label="CaptchaModule.mxml" url="source/modules/CaptchaModule.mxml.html"/>
+				<node icon="mxmlIcon" label="CarouselLayoutModule.mxml" url="source/modules/CarouselLayoutModule.mxml.html"/>
+				<node icon="mxmlIcon" label="CarouselListModule.mxml" url="source/modules/CarouselListModule.mxml.html"/>
+				<node icon="mxmlIcon" label="ClocksModule.mxml" url="source/modules/ClocksModule.mxml.html"/>
+				<node icon="mxmlIcon" label="ColorizerModule.mxml" url="source/modules/ColorizerModule.mxml.html"/>
+				<node icon="mxmlIcon" label="ColorPickerModule.mxml" url="source/modules/ColorPickerModule.mxml.html"/>
+				<node icon="mxmlIcon" label="ColorSpacePickerModule.mxml" url="source/modules/ColorSpacePickerModule.mxml.html"/>
+				<node icon="mxmlIcon" label="CompassContainerModule.mxml" url="source/modules/CompassContainerModule.mxml.html"/>
+				<node icon="mxmlIcon" label="ContainerCombination.mxml" url="source/modules/ContainerCombination.mxml.html"/>
+				<node icon="mxmlIcon" label="CoverflowLayoutModule.mxml" url="source/modules/CoverflowLayoutModule.mxml.html"/>
+				<node icon="mxmlIcon" label="CoverflowListModule.mxml" url="source/modules/CoverflowListModule.mxml.html"/>
+				<node icon="mxmlIcon" label="CursorManagerModule.mxml" url="source/modules/CursorManagerModule.mxml.html"/>
+				<node icon="mxmlIcon" label="DatePickerModule.mxml" url="source/modules/DatePickerModule.mxml.html"/>
+				<node icon="mxmlIcon" label="DockingCompassContainerModule.mxml" url="source/modules/DockingCompassContainerModule.mxml.html"/>
+				<node icon="mxmlIcon" label="DonutModule.mxml" url="source/modules/DonutModule.mxml.html"/>
+				<node icon="mxmlIcon" label="ExpandingContainerModule.mxml" url="source/modules/ExpandingContainerModule.mxml.html"/>
+				<node icon="mxmlIcon" label="FieldSetModule.mxml" url="source/modules/FieldSetModule.mxml.html"/>
+				<node icon="mxmlIcon" label="FiltersModule.mxml" url="source/modules/FiltersModule.mxml.html"/>
+				<node icon="mxmlIcon" label="FlexContextMenuModule.mxml" url="source/modules/FlexContextMenuModule.mxml.html"/>
+				<node icon="mxmlIcon" label="FloatPaneControlBarModule.mxml" url="source/modules/FloatPaneControlBarModule.mxml.html"/>
+				<node icon="mxmlIcon" label="FunnelModule.mxml" url="source/modules/FunnelModule.mxml.html"/>
+				<node icon="mxmlIcon" label="GraphicsEditorModule.mxml" url="source/modules/GraphicsEditorModule.mxml.html"/>
+				<node icon="mxmlIcon" label="HeatmapModule.mxml" url="source/modules/HeatmapModule.mxml.html"/>
+				<node icon="mxmlIcon" label="HtmlDragDropModule.mxml" url="source/modules/HtmlDragDropModule.mxml.html"/>
+				<node icon="mxmlIcon" label="HtmlFrameModule.mxml" url="source/modules/HtmlFrameModule.mxml.html"/>
+				<node icon="mxmlIcon" label="HtmlGeolocationModule.mxml" url="source/modules/HtmlGeolocationModule.mxml.html"/>
+				<node icon="mxmlIcon" label="iCalendarParserModule.mxml" url="source/modules/iCalendarParserModule.mxml.html"/>
+				<node icon="mxmlIcon" label="iCalendarRecurrenceModule.mxml" url="source/modules/iCalendarRecurrenceModule.mxml.html"/>
+				<node icon="mxmlIcon" label="IconButtonModule.mxml" url="source/modules/IconButtonModule.mxml.html"/>
+				<node icon="mxmlIcon" label="LinearGaugesModule.mxml" url="source/modules/LinearGaugesModule.mxml.html"/>
+				<node icon="mxmlIcon" label="MagnifierModule.mxml" url="source/modules/MagnifierModule.mxml.html"/>
+				<node icon="mxmlIcon" label="MenuAndMenuBarModule.mxml" url="source/modules/MenuAndMenuBarModule.mxml.html"/>
+				<node icon="mxmlIcon" label="MiniViewportModule.mxml" url="source/modules/MiniViewportModule.mxml.html"/>
+				<node icon="mxmlIcon" label="PackedLayoutModule.mxml" url="source/modules/PackedLayoutModule.mxml.html"/>
+				<node icon="mxmlIcon" label="PackedListModule.mxml" url="source/modules/PackedListModule.mxml.html"/>
+				<node icon="mxmlIcon" label="PaneModule.mxml" url="source/modules/PaneModule.mxml.html"/>
+				<node icon="mxmlIcon" label="PaneNavigatorsModule.mxml" url="source/modules/PaneNavigatorsModule.mxml.html"/>
+				<node icon="mxmlIcon" label="PopUpButtonModule.mxml" url="source/modules/PopUpButtonModule.mxml.html"/>
+				<node icon="mxmlIcon" label="ProgressDisplayModule.mxml" url="source/modules/ProgressDisplayModule.mxml.html"/>
+				<node icon="mxmlIcon" label="RadarModule.mxml" url="source/modules/RadarModule.mxml.html"/>
+				<node icon="mxmlIcon" label="RadialGaugesModule.mxml" url="source/modules/RadialGaugesModule.mxml.html"/>
+				<node icon="mxmlIcon" label="RatingModule.mxml" url="source/modules/RatingModule.mxml.html"/>
+				<node icon="mxmlIcon" label="ReflectionContainerModule.mxml" url="source/modules/ReflectionContainerModule.mxml.html"/>
+				<node icon="mxmlIcon" label="RichTextEditorModule.mxml" url="source/modules/RichTextEditorModule.mxml.html"/>
+				<node icon="mxmlIcon" label="RotaryFieldModule.mxml" url="source/modules/RotaryFieldModule.mxml.html"/>
+				<node icon="mxmlIcon" label="SafariMouseWheelFixModule.mxml" url="source/modules/SafariMouseWheelFixModule.mxml.html"/>
+				<node icon="mxmlIcon" label="ScrollerModule.mxml" url="source/modules/ScrollerModule.mxml.html"/>
+				<node icon="mxmlIcon" label="SeparatorsModule.mxml" url="source/modules/SeparatorsModule.mxml.html"/>
+				<node icon="mxmlIcon" label="SliderFieldModule.mxml" url="source/modules/SliderFieldModule.mxml.html"/>
+				<node icon="mxmlIcon" label="SparklinesModule.mxml" url="source/modules/SparklinesModule.mxml.html"/>
+				<node icon="mxmlIcon" label="TextInputModule.mxml" url="source/modules/TextInputModule.mxml.html"/>
+				<node icon="mxmlIcon" label="ThemesModule.mxml" url="source/modules/ThemesModule.mxml.html"/>
+				<node icon="mxmlIcon" label="TimebarContainerModule.mxml" url="source/modules/TimebarContainerModule.mxml.html"/>
+				<node icon="mxmlIcon" label="TimelineModule.mxml" url="source/modules/TimelineModule.mxml.html"/>
+				<node icon="mxmlIcon" label="TimeMachineLayoutModule.mxml" url="source/modules/TimeMachineLayoutModule.mxml.html"/>
+				<node icon="mxmlIcon" label="TimeMachineListModule.mxml" url="source/modules/TimeMachineListModule.mxml.html"/>
+				<node icon="mxmlIcon" label="TimePickerModule.mxml" url="source/modules/TimePickerModule.mxml.html"/>
+				<node icon="mxmlIcon" label="ToggleSwitchDesktopModule.mxml" url="source/modules/ToggleSwitchDesktopModule.mxml.html"/>
+				<node icon="mxmlIcon" label="ToolbarModule.mxml" url="source/modules/ToolbarModule.mxml.html"/>
+				<node icon="mxmlIcon" label="TransformContainerModule.mxml" url="source/modules/TransformContainerModule.mxml.html"/>
+				<node icon="mxmlIcon" label="TreeMapModule.mxml" url="source/modules/TreeMapModule.mxml.html"/>
+				<node icon="mxmlIcon" label="ViewStackModule.mxml" url="source/modules/ViewStackModule.mxml.html"/>
+				<node icon="mxmlIcon" label="WheelListModule.mxml" url="source/modules/WheelListModule.mxml.html"/>
+			</node>
+			<node icon="mxmlAppIcon" selected="true" label="ArdisiaDemo.mxml" url="source/ArdisiaDemo.mxml.html"/>
+		</node>
+	</nodes>
+	<zipfile label="Download source (ZIP, 296K)" url="ArdisiaDemo.zip">
+	</zipfile>
+	<sdklink label="Download Flex SDK" url="http://www.adobe.com/go/flex451_sdk_download">
+	</sdklink>
+</index>
