@@ -46,31 +46,31 @@ function getHeader($selection = -1) {
 			</a>
 		</div>
 		<ul>
-			<li><a href="/ardisia-component-library">Components</a>
+			<li><a href="/ardisia-component-library.html">Components</a>
 				<ul>
-					<li><a href="/ardisia-component-library">Overview</a></li>
-					<li><a href="/demos">Demos</a></li>
-					<li><a href="/faq">FAQ</a></li>
-					<li><a href="/license-faq">License FAQ</a></li>
+					<li><a href="/ardisia-component-library.html">Overview</a></li>
+					<li><a href="/demos.html">Demos</a></li>
+					<li><a href="/faq.html">FAQ</a></li>
+					<li><a href="/license-faq.html">License FAQ</a></li>
 				</ul>
 			</li>
-			<li><a href="/support">Support</a>
+			<li><a href="/support.html">Support</a>
 				<ul>
-					<li><a href="/support">Overview</a></li>
+					<li><a href="/support.html">Overview</a></li>
 					<li><a href="/documentation/">Documentation</a></li>
 					<li><a href="/documentation/asdocs/" target="_blank">ASDocs</a></li>
 					<li><a href="/forums/">Github</a></li>
 				</ul>
 			</li>
-			<li><a href="/services">Services</a></li>
-			<li><a href="/company">Company</a>
+			<li><a href="/services.html">Services</a></li>
+			<li><a href="/company.html">Company</a>
 				<ul>
-					<li><a href="/company">Overview</a></li>
-					<li><a href="/company#row-2">Laika</a></li>
+					<li><a href="/company.html">Overview</a></li>
+					<li><a href="/company.html#row-2">Laika</a></li>
 				</ul>
 			</li>
-			<li><a href="/store">Store</a></li>
-			<li><a href="/legal">Legal</a></li>
+			<li><a href="/store.html">Store</a></li>
+			<li><a href="/legal.html">Legal</a></li>
 		</ul>
 	</div>
 	<div id="contact-details">
@@ -95,11 +95,11 @@ function getHeader($selection = -1) {
 			</div>
 			<nav>
 				<ul>
-					<li><a href="/ardisia-component-library" <?php if ($selection == 0) { echo " class='selected'"; } ?>>COMPONENTS</a></li>
-					<li><a href="/support" <?php if ($selection == 1) { echo " class='selected'"; } ?>>SUPPORT</a></li>
-					<li><a href="/services" <?php if ($selection == 2) { echo " class='selected'"; } ?>>SERVICES</a></li>
-					<li><a href="/company" <?php if ($selection == 3) { echo " class='selected'"; } ?>>COMPANY</a></li>
-					<li><a href="/store" <?php if ($selection == 4) { echo " class='selected'"; } ?>>STORE</a></li>
+					<li><a href="/ardisia-component-library.html" <?php if ($selection == 0) { echo " class='selected'"; } ?>>COMPONENTS</a></li>
+					<li><a href="/support.html" <?php if ($selection == 1) { echo " class='selected'"; } ?>>SUPPORT</a></li>
+					<li><a href="/services.html" <?php if ($selection == 2) { echo " class='selected'"; } ?>>SERVICES</a></li>
+					<li><a href="/company.html" <?php if ($selection == 3) { echo " class='selected'"; } ?>>COMPANY</a></li>
+					<li><a href="/store.html" <?php if ($selection == 4) { echo " class='selected'"; } ?>>STORE</a></li>
 				</ul>
 			</nav>
 			<a id="mobile-menu-popup-button" href="#">
@@ -165,26 +165,26 @@ function getFooter() {
 			</div>
 			<div class="mobile-sitemap-container">
 				<ul>
-					<li><a href="/ardisia-component-library">Components</a></li>
-					<li><a href="/support">Support</a></li>
-					<li><a href="/services">Services</a></li>
-					<li><a href="/company">Company</a></li>
+					<li><a href="/ardisia-component-library.html">Components</a></li>
+					<li><a href="/support.html">Support</a></li>
+					<li><a href="/services.html">Services</a></li>
+					<li><a href="/company.html">Company</a></li>
 					<li><a href="/forum/">Github</a></li>
-					<li><a href="/store">Store</a></li>
+					<li><a href="/store.html">Store</a></li>
 				</ul>
 			</div>	
 			<div class="sitemap-container"><div class="link-category">
 					<h6>Components</h6>
 					<ul>
-						<li><a href="/ardisia-component-library">Overview</a></li>
-						<li><a href="/demos">Demos</a></li>
-						<li><a href="/faq">FAQ</a></li>
-						<li><a href="/license-faq">License FAQ</a></li>
+						<li><a href="/ardisia-component-library.html">Overview</a></li>
+						<li><a href="/demos.html">Demos</a></li>
+						<li><a href="/faq.html">FAQ</a></li>
+						<li><a href="/license-faq.html">License FAQ</a></li>
 					</ul>
 				</div><div class="link-category">
 					<h6>Support</h6>
 					<ul>
-						<li><a href="/support">Overview</a></li>
+						<li><a href="/support.html">Overview</a></li>
 						<li><a href="/documentation">Documentation</a></li>
 						<li><a href="/documentation/asdocs" target="_blank">ASDocs</a></li>
 						<li><a href="/forum/">Github</a></li>
@@ -192,25 +192,25 @@ function getFooter() {
 				</div><div class="link-category">
 					<h6>Services</h6>
 					<ul>
-						<li><a href="/services">Overview</a></li>
+						<li><a href="/services.html">Overview</a></li>
 					</ul>
 				</div><div class="link-category">
 					<h6>Company</h6>
 					<ul>
-						<li><a href="/company">Overview</a></li>
-						<li><a href="/company#row-2">Laika</a></li>
+						<li><a href="/company.html">Overview</a></li>
+						<li><a href="/company.html#row-2">Laika</a></li>
 					</ul>
 				</div><div class="link-category">
 					<h6>Store</h6>
 					<ul>
-						<li><a href="/store">Purchase</a></li>
+						<li><a href="/store.html">Purchase</a></li>
 					</ul>
 				</div></div>
 			<div class="legal-links-wrapper">
 				<div>
-					<a href="/legal/">Legal</a>
-					<a href="/legal/terms-of-use" class="right-footer-wrapper">Terms of Use</a>
-					<a href="/legal/privacy">Privacy</a>
+					<a href="/legal.html/">Legal</a>
+					<a href="/legal.html/terms-of-use" class="right-footer-wrapper">Terms of Use</a>
+					<a href="/legal.html/privacy">Privacy</a>
 				</div>
 				Copyright © <span id="copydt"></span><script>var el = document.getElementById("copydt");el.innerHTML = new Date().getFullYear()</script> Ardisia Labs LLC
 			</div>
