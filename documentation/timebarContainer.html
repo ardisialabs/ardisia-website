@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+     
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Docs - TimebarContainer</title>	    <link rel="stylesheet" href="/css/styles.css" type="text/css" charset="utf-8">
+		<link rel="shortcut icon" href="/favicon.ico" >
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="/js/scripts.js"></script>
+	</head>
+	
+    <body id="top" class="documentation">
+    	<link rel="stylesheet" type="text/css" href="/js/google-code-prettify/themes/github.css" />
+    	<script src="/js/google-code-prettify/prettify.js"></script>
+    	<script>
+			$(document).ready(function() {
+				prettyPrint();
+			});
+		</script>
+		 
+	<div id="mobile-menu">
+		<div>
+			<div id="logo" class="logo"><span>Ardisia</span><span>Labs</span></div>
+    		<a id="close-button" href="#">
+	    		<svg width="20" height="20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+					<line x1="2" x2="18" y1="2" y2="18" stroke="#FFFFFF" fill="transparent" stroke-linecap="round" stroke-width="4"/>
+					<line x1="2" x2="18" y1="18" y2="2" stroke="#FFFFFF" fill="transparent" stroke-linecap="round" stroke-width="4"/>
+				</svg>
+			</a>
+		</div>
+		<ul>
+			<li><a href="/ardisia-component-library">Components</a>
+				<ul>
+					<li><a href="/ardisia-component-library">Overview</a></li>
+					<li><a href="/demos">Demos</a></li>
+					<li><a href="/faq">FAQ</a></li>
+					<li><a href="/license-faq">License FAQ</a></li>
+				</ul>
+			</li>
+			<li><a href="/support">Support</a>
+				<ul>
+					<li><a href="/support">Overview</a></li>
+					<li><a href="/documentation/">Documentation</a></li>
+					<li><a href="/documentation/asdocs/" target="_blank">ASDocs</a></li>
+					<li><a href="/forums/">Github</a></li>
+				</ul>
+			</li>
+			<li><a href="/services">Services</a></li>
+			<li><a href="/company">Company</a>
+				<ul>
+					<li><a href="/company">Overview</a></li>
+					<li><a href="/company#row-2">Laika</a></li>
+				</ul>
+			</li>
+			<li><a href="/store">Store</a></li>
+			<li><a href="/legal">Legal</a></li>
+		</ul>
+	</div>
+	<div id="contact-details">
+		<div>
+			<span>EMAIL:</span>
+			<span><a href="mailto:info@ardisialabs.com">info@ardisialabs.com</a></span> 
+		</div> 
+	</div>
+	<header class="unselectable"> 
+		<div class="container">
+			<a id="open-contact-details" href="#">
+				Contact
+				<img src="/assets/vector/envelope-closed.min.svg" alt="envelope">
+			</a>
+			<a href="/">
+				<div id="logo" class="logo"><span>Ardisia</span><span>Labs</span></div>
+			</a>
+			<div id="sub-links-container">
+				<ul>
+					<li><a href="/forums/">Github</a></li>
+				</ul>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="/ardisia-component-library" >COMPONENTS</a></li>
+					<li><a href="/support"  class='selected'>SUPPORT</a></li>
+					<li><a href="/services" >SERVICES</a></li>
+					<li><a href="/company" >COMPANY</a></li>
+					<li><a href="/store" >STORE</a></li>
+				</ul>
+			</nav>
+			<a id="mobile-menu-popup-button" href="#">
+				<svg width="30" height="27.5" version="1.1" xmlns="http://www.w3.org/2000/svg">
+					<line x1="2.5" x2="27.5" y1="2.5" y2="2.5" stroke="#FFFFFF" fill="transparent" stroke-linecap="round" stroke-width="5"/>
+					<line x1="2.5" x2="27.5" y1="12.5" y2="12.5" stroke="#FFFFFF" fill="transparent" stroke-linecap="round" stroke-width="5"/>
+					<line x1="2.5" x2="27.5" y1="22.5" y2="22.5" stroke="#FFFFFF" fill="transparent" stroke-linecap="round" stroke-width="5"/>
+				</svg>
+			</a>
+		</div>
+	</header>
+
+		<div class='sublinks'><div class='sublinks-wrapper'><h3>Support</h3><ul><li><a href='/support' >Overview</a></li><li><a href='/documentation/' class='selected'>Documentation</a></li><li><a href='/documentation/asdocs/'  target='_blank'>ASDocs</a></li></ul></div></div>		<main>
+    		<div id="row-1">
+    			<div class="container">
+    				<div>
+    					<div class="toc"><h4>Contents</h4>
+		    			<ul>
+		    				<li style="margin: 15px 0 7px;"><strong>Usage</strong></li>
+		    				<li ><a href="/documentation/using-the-library">Using the Library</a></li>
+		    				<li ><a href="/documentation/using-themes">Using the Themes</a></li>
+		    				<li ><a href="/documentation/using-demo">Using the Demo App</a></li>
+		    				<li style="margin: 15px 0 7px;"><strong>Components</strong></li>
+		    				<li><a href='/documentation/accordion'>Accordion</a></li><li><a href='/documentation/animatedImage'>AnimatedImage</a></li><li><a href='/documentation/autoComplete'>AutoComplete</a></li><li><a href='/documentation/autoFitText'>AutoFitText</a></li><li><a href='/documentation/barCode'>BarCode</a></li><li><a href='/documentation/bitmapAdjustments'>BitmapAdjustments</a></li><li><a href='/documentation/buttonBar'>ButtonBar</a></li><li><a href='/documentation/calculator'>Calculator</a></li><li><a href='/documentation/calendar'>Calendar</a></li><li><a href='/documentation/captcha'>CAPTCHA</a></li><li><a href='/documentation/carouselLayout'>CarouselLayout</a></li><li><a href='/documentation/carouselList'>CarouselList</a></li><li><a href='/documentation/clocks'>Clocks</a></li><li><a href='/documentation/colorizer'>Colorizer</a></li><li><a href='/documentation/colorPicker'>ColorPicker</a></li><li><a href='/documentation/colorSpacePicker'>ColorSpacePicker</a></li><li><a href='/documentation/compassContainer'>CompassContainer</a></li><li><a href='/documentation/coverflowLayout'>CoverflowLayout</a></li><li><a href='/documentation/coverflowList'>CoverflowList</a></li><li><a href='/documentation/cursorManager'>CursorManager</a></li><li><a href='/documentation/datePicker'>DatePicker</a></li><li><a href='/documentation/dockingCompassContainer'>DockingCompassContainer</a></li><li><a href='/documentation/donut'>Donut Chart</a></li><li><a href='/documentation/expandingContainer'>ExpandingContainer</a></li><li><a href='/documentation/fieldSet'>FieldSet</a></li><li><a href='/documentation/filters'>Filters</a></li><li><a href='/documentation/flexContextMenu'>FlexContextMenu</a></li><li><a href='/documentation/floatPaneControlBar'>FloatPaneControlBar</a></li><li><a href='/documentation/funnel'>Funnel Chart</a></li><li><a href='/documentation/graphicsEditor'>GraphicsEditor</a></li><li><a href='/documentation/heatmap'>Heatmap</a></li><li><a href='/documentation/htmlDragDrop'>HtmlDragDrop</a></li><li><a href='/documentation/htmlFrame'>HtmlFrame</a></li><li><a href='/documentation/htmlGeolocation'>HtmlGeolocation</a></li><li><a href='/documentation/iCalendarParser'>iCalendarParser</a></li><li><a href='/documentation/iCalendarRecurrence'>iCalendarRecurrence</a></li><li><a href='/documentation/iconButton'>IconButton</a></li><li><a href='/documentation/linearGauges'>Linear Gauges</a></li><li><a href='/documentation/magnifier'>Magnifier</a></li><li><a href='/documentation/menuBar'>Menu and MenuBar</a></li><li><a href='/documentation/miniViewport'>MiniViewport</a></li><li><a href='/documentation/packedLayout'>PackedLayout</a></li><li><a href='/documentation/packedList'>PackedList</a></li><li><a href='/documentation/pane'>Pane</a></li><li><a href='/documentation/popUpButton'>PopUpButton</a></li><li><a href='/documentation/progressDisplay'>ProgressDisplay</a></li><li><a href='/documentation/radar'>Radar</a></li><li><a href='/documentation/radialGauge'>Radial Gauge</a></li><li><a href='/documentation/rating'>Rating</a></li><li><a href='/documentation/reflectionContainer'>ReflectionContainer</a></li><li><a href='/documentation/richTextEditor'>RichTextEditor</a></li><li><a href='/documentation/rotaryField'>RotaryField</a></li><li><a href='/documentation/safariMouseWheelFix'>SafariMouseWheelFix</a></li><li><a href='/documentation/scroller'>Scroller</a></li><li><a href='/documentation/separator'>Separators</a></li><li><a href='/documentation/sliderField'>SliderField</a></li><li><a href='/documentation/sparklines'>Sparklines</a></li><li><a href='/documentation/tabPaneNavigator'>TabPaneNavigator</a></li><li><a href='/documentation/textInput'>TextInput</a></li><li class='selected'><a href='/documentation/timebarContainer'>TimebarContainer</a></li><li><a href='/documentation/timeline'>Timeline</a></li><li><a href='/documentation/timeMachineLayout'>TimeMachineLayout</a></li><li><a href='/documentation/timeMachineList'>TimeMachineList</a></li><li><a href='/documentation/timePicker'>TimePicker</a></li><li><a href='/documentation/toggleSwitchDesktop'>ToggleSwitchDesktop</a></li><li><a href='/documentation/transformContainer'>TransformContainer</a></li><li><a href='/documentation/treeMap'>TreeMap</a></li><li><a href='/documentation/viewStack'>ViewStack</a></li><li><a href='/documentation/wheelList'>WheelList</a></li>		    			</ul></div><div class="contents"><h2 class='toc-title'>TimebarContainer</h2><h3>Overview</h3>
+<p>
+	The TimebarContainer component allows users to display and select time 
+	periods with custom time intervals.
+</p>
+
+<h3>Creating the TimebarContainer Component</h3>
+<p>
+	The TimebarContainer extends the Flex SDK SkinnableContainer class and thus 
+	can be added to any container that implements IVisualElementContainer.
+</p>
+
+<h3>Using the TimebarContainer Component</h3>
+<p>
+	The TimebarContainer works by first defining a series of "intervalModes" 
+	that will determine what time intervals can be displayed. Each item renderer 
+	displays a "IntervalMode". The most specific interval will be displayed. For 
+	example, if the minimum visible duration is 1 week, then a time interval of 
+	1 year will obviously not fit, but an interval of 1 day might. See the 
+	ASDocs for the ardisia.components.timebarContainer.dataTypes.IntervalMode 
+	class.
+</p>
+<p>
+	Next, define the start and end time via the "periodBegin" and "periodEnd" 
+	properties and the minimum displayed period via the 
+	"minimumVisibleDuration".  Users can scroll and change the time period that 
+	is visible or it can be set directly or retrieved via the 
+	"visiblePeriodBegin" and "visiblePeriodEnd" properties.
+</p>
+<p>
+	Child content can be added generally, exactly the same as a 
+	SkinnableContainer. Often times, a simple chart makes sense.
+</p>
+
+<h3>Adding a Custom Interval Mode</h3>
+<p>
+	Each interval mode is defined by an IntervalMode object and sets how many 
+	years, months, days, hours, minutes, and seconds are in the interval mode.
+</p>
+<p>
+	The time span is additive for IntervalMode objects. In other words, if the 
+	"years" value is 1 and the "months" value is 6, each renderer would span 1 
+	year and 6 months.
+</p>
+<p>
+	Also, supply a name for each IntervalMode object to pass to the item 
+	renderers to provide them with some information as to how to display the 
+	date information. For example, if displaying a single day per renderer, set 
+	the "name" property on the IntervalMode object to "day" and then on the 
+	renderer detect that the mode is "day" and parse Date objects with the names 
+	of the days of the week.
+</p>
+<p>
+	See the item renderer classes for further explanation of how to create 
+	custom time intervals.
+</p>
+<p>
+	Below is a list of interval modes defined in the demo application:
+</p>
+<pre class="prettyprint">
+&lt;fx:Array id="intervalsExample"&gt;
+	&lt;dataTypes:IntervalMode name="millennium" years="1000" /&gt;
+	&lt;dataTypes:IntervalMode name="halfMillenium" years="500" /&gt;
+	&lt;dataTypes:IntervalMode name="century" years="100" /&gt;
+	&lt;dataTypes:IntervalMode name="halfCentury" years="50" /&gt;
+	&lt;dataTypes:IntervalMode name="quarterCentury" years="25" /&gt;
+	&lt;dataTypes:IntervalMode name="decade" years="10" /&gt;
+	&lt;dataTypes:IntervalMode name="halfDecade" years="5" /&gt;
+	&lt;dataTypes:IntervalMode name="year" years="1" /&gt;
+	&lt;dataTypes:IntervalMode name="halfYear" months="6" /&gt;
+	&lt;dataTypes:IntervalMode name="quarter" months="3" /&gt;
+	&lt;dataTypes:IntervalMode name="month" months="1" /&gt;
+	&lt;dataTypes:IntervalMode name="week" days="7" /&gt;
+	&lt;dataTypes:IntervalMode name="day" days="1" /&gt;
+	&lt;dataTypes:IntervalMode name="hours" hours="1" /&gt;
+	&lt;dataTypes:IntervalMode name="thirtyMinutes" minutes="30" /&gt;
+	&lt;dataTypes:IntervalMode name="tenMinutes" minutes="10" /&gt;
+	&lt;dataTypes:IntervalMode name="minutes" minutes="1" /&gt;
+	&lt;dataTypes:IntervalMode name="thirtySeconds" seconds="30" /&gt;
+	&lt;dataTypes:IntervalMode name="fifteenSeconds" seconds="15" /&gt;
+	&lt;dataTypes:IntervalMode name="seconds" seconds="1" /&gt;
+&lt;/fx:Array&gt;
+</pre>
+
+<h3>Item Renderers</h3>
+<p>
+	There are two sets of interval item renderers: the header interval renderers 
+	that sit at the top of the TimebarContainer and the generalized item 
+	renderers. The header item renderers display longer time intervals and sit 
+	above the general item renderers. The item renderer factories are defined in 
+	the skin as "headerItemRendererFactoryPart" and the 
+	"itemRendererFactoryPart" skin parts.
+</p>
+<p>
+	Both sets of the renderers implement 
+	ardisia.components.timebarContainer.interfaces.ITimebarContainerItemRenderer 
+	and can be further customized to display new interval modes. See the code 
+	for the TimebarContainerItemRendererBase to understand how the process of 
+	adding modes works. It is rather easy to understand when looking at the code 
+	directly. Subclass the 
+	ardisia.components.timebarContainer.themes.baseClasses.TimebarContainerItemRendererBase 
+	when creating custom time interval item renderers.
+</p>
+<p>
+	The selection lasso is created by a skin part factory 
+	"selectionLassoFactoryPart" and will only create a single item renderer. 
+	It must implement 
+	ardisia.components.timebarContainer.interfaces.ITimebarContainerSelectionLasso.
+</p>
+
+<h3>Selected Time Periods</h3>
+<p>
+	Users can select time periods if the "selectionEnabled" property is true, 
+	and the selected time period can be set explicitly or retrieved via the 
+	"selectionPeriodBegin" and "selectionPeriodEnd" properties.
+</p>
+<p>
+	Users can also drag the selected time period. Use the "autoScrollThreshold" 
+	property to set how close to the horizontal boundaries of the viewport the 
+	user must drag before the TimebarContainer will automatically scroll.
+</p>
+
+<h3>Zooming In and Out</h3>
+<p>
+	Users can zoom in and out by using the resize buttons on the left and right 
+	of the horizontal scroll bar or via the mouse wheel.  For the mouse wheel, 
+	control the amount of zoom via the "zoomFactor" property.
+</p>
+
+<h3>Animations &amp; Effects</h3>
+<p>
+	When a selected time lasso drag ends, it will animate into the snapped time 
+	interval.  This animation is hard wired and cannot be customized without 
+	subclassing.
+</p>
+
+<h3>Layout</h3>
+<p>
+	Layout is completely handled in the host component without the need for a 
+	layout class.
+</p>
+
+<h3>Vertical Overflow</h3>
+<p>
+	If the child content overflows the TimebarContainer's viewport, dynamic 
+	vertical scrollbars will be added automatically. See the 
+	"vScrollBarFactoryPart" skin part to change the vertical scrollbar factory.
+</p>
+
+<h3>Considerations</h3>
+<p>
+	The contentGroup can have a massive width. So if a display object will be 
+	extremely wide, remember to increase its "maxWidth" property.
+</p>
+<p>
+	Also, remember that bitmaps have width restrictions under older Flash VMs.
+</p>
+<p>
+	You can overwhelm the component if the number of time intervals grows too 
+	large. For example, displaying every second for a hundred years will crash 
+	the VM.
+</p>
+
+<h3>Default Property</h3>
+<p>
+	Child content, like a Flex SDK SkinnableContainer.
+</p>
+
+<h3>Selected Custom Events</h3>
+<p>
+	<b>VISIBLE_PERIOD_CHANGE</b><br>
+	ardisia.components.timebarContainer.events.TimebarContainerEvent<br>
+	Dispatched when the visible period changes.
+</p>
+<p>
+	<b>SELECTED_PERIOD_CHANGE</b><br>
+	ardisia.components.timebarContainer.events.TimebarContainerEvent<br>
+	Dispatched when the selected period changes.
+</p>
+
+<h3>Selected Custom Styles</h3>
+<p>
+	<b>borderVisible</b><br>
+	default true<br>
+	True to display a border.
+</p>
+<p>
+	<b>borderColor</b><br>
+	default defaults.css<br>
+	The color of the border.
+</p>
+<p>
+	<b>borderAlpha</b><br>
+	default 1<br>
+	The alpha of the border.
+</p>
+<p>
+	<b>paddingTop</b><br>
+	default 60<br>
+	Padding from the top for the contentGroup.
+</p>
+<p>
+	<b>paddingBottom</b><br>
+	default 0<br>
+	Padding from the bottom for the contentGroup.
+</p>
+
+<h3>Themes &amp; Skinning</h3>
+<p>
+	Skins and item renderers are provided for the Spark, London, and Stockholm 
+	themes.
+</p>
+
+<h3>Example</h3>
+<p>
+	See the TimebarContainer demo application for example code.
+</p><a href='#top'>Back To Top</a></div></div></div>
+    		</div>
+    	</main>
+		 
+
+	<footer>
+		<div class="container">
+			<div class="footer-description">
+				Find the good stuff...
+				<a href="/">
+					<div class="logo">
+						<span>Ardisia</span><span>Labs</span>
+					</div>
+				</a>
+			</div>
+			<div class="mobile-sitemap-container">
+				<ul>
+					<li><a href="/ardisia-component-library">Components</a></li>
+					<li><a href="/support">Support</a></li>
+					<li><a href="/services">Services</a></li>
+					<li><a href="/company">Company</a></li>
+					<li><a href="/forum/">Github</a></li>
+					<li><a href="/store">Store</a></li>
+				</ul>
+			</div>	
+			<div class="sitemap-container"><div class="link-category">
+					<h6>Components</h6>
+					<ul>
+						<li><a href="/ardisia-component-library">Overview</a></li>
+						<li><a href="/demos">Demos</a></li>
+						<li><a href="/faq">FAQ</a></li>
+						<li><a href="/license-faq">License FAQ</a></li>
+					</ul>
+				</div><div class="link-category">
+					<h6>Support</h6>
+					<ul>
+						<li><a href="/support">Overview</a></li>
+						<li><a href="/documentation">Documentation</a></li>
+						<li><a href="/documentation/asdocs" target="_blank">ASDocs</a></li>
+						<li><a href="/forum/">Github</a></li>
+					</ul>
+				</div><div class="link-category">
+					<h6>Services</h6>
+					<ul>
+						<li><a href="/services">Overview</a></li>
+					</ul>
+				</div><div class="link-category">
+					<h6>Company</h6>
+					<ul>
+						<li><a href="/company">Overview</a></li>
+						<li><a href="/company#row-2">Laika</a></li>
+					</ul>
+				</div><div class="link-category">
+					<h6>Store</h6>
+					<ul>
+						<li><a href="/store">Purchase</a></li>
+					</ul>
+				</div></div>
+			<div class="legal-links-wrapper">
+				<div>
+					<a href="/legal/">Legal</a>
+					<a href="/legal/terms-of-use" class="right-footer-wrapper">Terms of Use</a>
+					<a href="/legal/privacy">Privacy</a>
+				</div>
+				Copyright © <span id="copydt"></span><script>var el = document.getElementById("copydt");el.innerHTML = new Date().getFullYear()</script> Ardisia Labs LLC
+			</div>
+			<div class="apache-wrapper">
+				<div>
+					Apache Flex&trade; and Apache&trade; are trademarks of The Apache Software Foundation. 
+					The Apache Flex SDK product page is located <a href="http://flex.apache.org/" target="_blank">here.</a>
+					The Apache Software Foundation ("ASF") is not associated with Ardisia Labs and does not 
+					endorse the Ardisia Component Library in any way.
+				</div>
+				<a id="apache-logo-link" href="http://flex.apache.org/"><img src="/assets/images/apache-flex-logo-grayscale.png" alt="Apache Flex Logo"></a>
+			</div>
+		</div>
+	</footer>
+	
+    </body>
+</html>
